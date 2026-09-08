@@ -23,6 +23,8 @@ Default if they said “everywhere” without “submit”: Pulse/Blitz = full t
 
 No public repo → make it public first. Do not invent a marketplace URL.
 
+`npx skills add {owner}/{repo}` clones the **default** branch. That branch must contain `skills/<name>/SKILL.md` with `name` and `description`. An empty default branch is `failed`, not `listed`.
+
 ## Before any submit
 
 1. Run `bash skills/promoting-developer-apps/scripts/validate.sh`.
