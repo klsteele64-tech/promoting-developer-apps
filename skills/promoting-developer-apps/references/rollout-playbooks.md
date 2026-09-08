@@ -98,4 +98,4 @@ If evidence is mixed, pick the **softer** mode.
 
 Play Store / Android: **play-store-agent**. iOS: **app-store-agent** (Whisper = TestFlight). Extensions: **extension-store-agent**. OSS: **oss-launch-agent**. App campaigns / ASA only when budget is not $0.
 
-Full campaigns also dispatch positioning-agent, channel-scout, claims-agent. Paid/freemium → pricing-agent. Extra languages → locale-agent. “Docs that rank” → seo-cluster-agent. Pulse/Blitz add press-kit-agent, measurement-agent, retention-agent.
+Full campaigns also dispatch positioning-agent, channel-scout, claims-agent. Paid/freemium → pricing-agent. Extra languages → locale-agent. “Docs that rank” → seo-cluster-agent. Skill/plugin → skill-distribution-agent (all vs named hosts). Pulse/Blitz add press-kit-agent, measurement-agent, retention-agent.

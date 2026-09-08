@@ -1,10 +1,10 @@
 ---
 name: promoting-developer-apps
-description: Use when a developer needs to promote an app or website, plan free or paid advertising, choose a launch intensity, write docs, landing, emails, or launch posts, localize store listings, plan pricing tests or an SEO article cluster, create a walkthrough video, promote a Google Play, App Store, or extension listing, launch OSS, raise funding, or sell the app or their talent.
+description: Use when a developer needs to promote an app or website, plan free or paid advertising, choose a launch intensity, write docs, landing, emails, or launch posts, localize store listings, plan pricing tests or an SEO article cluster, create a walkthrough video, promote a Google Play, App Store, or extension listing, launch OSS, raise funding, sell the app or their talent, or publish an Agent Skill to Cursor, ChatGPT, Claude, or other AI hosts.
 license: MIT
 metadata:
   author: Dev Launch Campaign
-  version: "1.5.0"
+  version: "1.6.0"
   category: marketing
 ---
 
@@ -35,8 +35,9 @@ Write [assets/campaign-brief.md](assets/campaign-brief.md). Missing facts: [refe
 5. **claims-agent** ([subagents/claims-agent.md](subagents/claims-agent.md)) before any paid or store row.
 6. Paid/freemium or revenue goal → **pricing-agent** ([subagents/pricing-agent.md](subagents/pricing-agent.md)). Extra languages or store countries → **locale-agent** ([subagents/locale-agent.md](subagents/locale-agent.md)).
 7. Content / store / growth slices → dispatch only the agents that apply (table below). SEO / “docs that rank” → **seo-cluster-agent** ([subagents/seo-cluster-agent.md](subagents/seo-cluster-agent.md)). Method picker: [references/content-studio.md](references/content-studio.md).
-8. Money goal → **funding-agent**. Talent or sale → [references/talent-and-sales.md](references/talent-and-sales.md).
-9. Emit remaining `assets/` templates in deliverable order.
+8. Product is a skill/plugin, or “publish to AI hosts” → **skill-distribution-agent** ([subagents/skill-distribution-agent.md](subagents/skill-distribution-agent.md)). Ask all vs named hosts.
+9. Money goal → **funding-agent**. Talent or sale → [references/talent-and-sales.md](references/talent-and-sales.md).
+10. Emit remaining `assets/` templates in deliverable order.
 
 ## Intensities
 
@@ -76,7 +77,7 @@ Docs = **docs-agent**. Video = **video-agent** (`walkthrough/index.html`). Landi
 4. Channel plan — [assets/channel-plan.md](assets/channel-plan.md)
 5. 14-day calendar — [assets/launch-calendar.md](assets/launch-calendar.md)
 6. Claims check — [assets/claims-check.md](assets/claims-check.md)
-7. Relevant subagent packs (docs, video, landing, social, stores, locale, pricing, SEO cluster, email, press, measurement, …)
+7. Relevant subagent packs (docs, video, landing, social, stores, locale, pricing, SEO cluster, skill distribution, email, press, measurement, …)
 8. Funding or talent pack if relevant — [assets/funding-pitch.md](assets/funding-pitch.md), [assets/talent-offer.md](assets/talent-offer.md)
 
 One-slice asks: that slice + the brief.
@@ -111,6 +112,7 @@ One-slice asks: that slice + the brief.
 | locale-agent | Extra languages / countries | [subagents/locale-agent.md](subagents/locale-agent.md) | `locale/PLAN.md` |
 | pricing-agent | Paid / freemium / revenue | [subagents/pricing-agent.md](subagents/pricing-agent.md) | `pricing/PLAN.md` |
 | seo-cluster-agent | SEO / docs that rank | [subagents/seo-cluster-agent.md](subagents/seo-cluster-agent.md) | `seo/CLUSTER.md` |
+| skill-distribution-agent | Skill / plugin to AI hosts | [subagents/skill-distribution-agent.md](subagents/skill-distribution-agent.md) | `skill-distribution/PLAN.md` |
 
 If the host can spawn, spawn those agents. Cursor also loads `agents/*.md`. If it cannot spawn, run each instruction file as an **isolated pass**.
 
@@ -134,5 +136,6 @@ Parent synthesizes. Children do not invent channels, UI, or metrics.
 | Login / admin / accounts | Out of scope |
 | Invented WTP / regional prices | pricing-agent / locale-agent |
 | Invented volume / rank | seo-cluster-agent |
+| Cursor accept = all AI catalogs | skill-distribution-agent |
 
 Red flags: "blast PH and ads", paid on $0, medical/financial/crypto performance claims. Downgrade and say why.

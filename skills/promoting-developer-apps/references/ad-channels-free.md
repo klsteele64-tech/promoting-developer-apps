@@ -84,6 +84,7 @@ For each pick include: why this product, asset, CTA, metric, first action this w
 | Kaggle / HF Spaces / Replicate | ML products | Demo space | Forks, API calls |
 | Gumroad / Lemon / Polar discovery | Digital products | Product page | Sales |
 | Awesome-lists PRs | Dev tools | One-line listing | Evergreen clicks |
+| Agent Skill catalogs | Skills / plugins | skill-distribution-agent plan | Installs per host |
 
 ## Rules
 
