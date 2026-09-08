@@ -14,6 +14,9 @@ Do not run every agent on every ask. One-slice asks: that agent + the brief.
 | 4 | claims-agent | Before any paid or store row |
 | 5 | pricing-agent | Paid, freemium, or revenue goal |
 | 6 | locale-agent | Extra languages or store countries |
+| 7 | marketing-plan-agent | After 1–4 exist (synthesizes; does not invent) |
+| 8 | skill-distribution-agent | Product is a skill/plugin |
+| 9 | legal-checklist-agent | Store, paid row, funding, or public sale |
 
 ## Content (asked or missing)
 
@@ -28,6 +31,7 @@ Do not run every agent on every ask. One-slice asks: that agent + the brief.
 | creative-agent | Ad/social creative matrix |
 | press-kit-agent | Press or Pulse/Blitz launch |
 | seo-cluster-agent | SEO, blog, or “docs that rank” |
+| marketing-plan-agent | After core campaign (also always-on) |
 
 ## Stores and distribution
 
@@ -37,18 +41,19 @@ Do not run every agent on every ask. One-slice asks: that agent + the brief.
 | app-store-agent | Apple App Store / iOS |
 | extension-store-agent | Chrome / Firefox / Edge add-on |
 | oss-launch-agent | Library, CLI, or OSS |
-| skill-distribution-agent | Agent Skill / plugin — **submit** all or selected AI marketplace forms |
+| skill-distribution-agent | Agent Skill / plugin — **submit** catalog hosts (not every AI system) |
 
 ## Growth and ops
 
 | Agent | When |
 |-------|------|
 | measurement-agent | Pulse/Blitz, or tracking asked |
-| reviews-agent | Live listing or directory |
+| reviews-agent | Live listing or directory (intake Q16) |
 | retention-agent | Users exist or Pulse+ |
 | partner-agent | Affiliates / partners asked |
 | community-agent | Discord/Slack/community asked |
 | funding-agent | Money goal |
-| legal-checklist-agent | Store, ads, or funding (checklist only) |
+| talent-agent | Sell the app or sell talent |
+| legal-checklist-agent | Store, ads, funding, or public sale (checklist only) |
 
 Parent synthesizes. Children do not invent channels, UI, prices, or metrics.
