@@ -17,6 +17,10 @@ mkdir -p "$OUT_DIR"
 bash "$ROOT/skills/promoting-developer-apps/scripts/validate.sh"
 bash "$ROOT/scripts/pack-chatgpt-skill.sh" "$ZIP"
 
+status_line() {
+  printf '| %s | %s | %s |\n' "$1" "$2" "$3"
+}
+
 CLAUDE_ST="blocked-on-auth"
 CODEX_ST="blocked-on-auth"
 NPX_ST="blocked-on-auth"
@@ -84,7 +88,7 @@ Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)
 |------|--------|------|
 | Claude Code (\`claude plugin marketplace add\`) | ${CLAUDE_ST} | See claude.out / claude.err |
 | Codex (\`codex plugin marketplace add\`) | ${CODEX_ST} | See codex.out / codex.err |
-| npx skills | ${NPX_ST} | See npx.out / npx.err |
+| npx skills | ${NPX_ST} | See npx.out / npx.err. Installer clones the default branch. |
 
 ## Web forms — fill and click Submit (publisher must be signed in)
 

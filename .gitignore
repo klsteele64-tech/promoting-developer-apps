@@ -4,3 +4,5 @@ node_modules/
 .tmp/
 dist/
 /skill-distribution/
+.agents/skills/
+skills-lock.json
