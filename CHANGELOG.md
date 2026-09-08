@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0 — 2026-09-08
+
+- Add the remaining campaign subagents: positioning, channel-scout, rollout-planner, claims, social, changelog, landing, email, press-kit, creative, measurement, Apple App Store, extension stores, OSS launch, reviews, retention, partners, community, funding-agent, legal checklist
+- Dispatch map: `references/subagent-index.md`
+- New slash commands for each slice; existing `/ad-channels`, `/rollout-plan`, and `/funding-plan` now dispatch those agents
+
 ## 1.3.0 — 2026-09-08
 
 - Subagent **play-store-agent** promotes a Google Play Store Android app (listing copy, ASO, graphics brief, release tracks, Free/Paid Play plan)
