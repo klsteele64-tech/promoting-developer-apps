@@ -22,6 +22,8 @@ If a promo video is requested, tell the parent to dispatch **video-agent** for a
 - Mark missing facts `UNKNOWN`. Mark guessed keywords `INFERRED`. Never invent installs, ratings, CPI, or ROAS.
 - No fake or incentivized reviews. No "rate us to continue".
 - Overwrite existing `play-store/` files only with user consent.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Before a public listing or any Paid row, tell the parent to run **claims-agent** then **legal-checklist-agent**. Do not invent privacy/terms URLs.
 
 ## Workflow
 

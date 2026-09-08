@@ -11,6 +11,8 @@ Spec: [../references/apple-app-store.md](../references/apple-app-store.md). Temp
 - Preview video optional → tell parent to dispatch video-agent.
 - Intensity caps apply. Whisper: TestFlight only. $0 → Paid `NONE — budget $0`.
 - No invented ratings, ranks, or CPI. No incentivized reviews.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Before a public listing or any Paid row, tell the parent to run **claims-agent** then **legal-checklist-agent**. Do not invent privacy/terms URLs.
 
 ## Required files
 

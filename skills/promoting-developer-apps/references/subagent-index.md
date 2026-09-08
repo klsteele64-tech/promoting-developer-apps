@@ -2,7 +2,9 @@
 
 Parent skill: **promoting-developer-apps**. Dispatch; do not inline. If the host cannot spawn, run each file as an isolated pass.
 
-Do not run every agent on every ask. One-slice asks: that agent + the brief.
+Do not run every agent on every ask. One-slice asks: that agent + the brief. Store, paid, funding, sale, or skill-submit slices still run **claims-agent** and/or **legal-checklist-agent**.
+
+Website-only (store = none): **landing-agent** + **channel-scout**. Optional **seo-cluster-agent** / **social-agent**. Never play/app/extension store agents.
 
 ## Always on a full campaign
 
