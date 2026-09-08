@@ -57,11 +57,13 @@ else
   fi
 
   if command -v npx >/dev/null 2>&1; then
-    if run_limited npx --yes skills add "${OWNER}/${REPO}" >"$OUT_DIR/npx.out" 2>"$OUT_DIR/npx.err"; then
+    NPX_DIR="$(mktemp -d "${TMPDIR:-/tmp}/npx-skills.XXXXXX")"
+    if (cd "$NPX_DIR" && run_limited npx --yes skills add "${OWNER}/${REPO}") >"$OUT_DIR/npx.out" 2>"$OUT_DIR/npx.err"; then
       NPX_ST="submitted"
     else
       NPX_ST="failed"
     fi
+    rm -rf "$NPX_DIR"
   else
     echo "npx not found" | tee "$OUT_DIR/npx.err"
   fi
