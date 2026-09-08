@@ -6,17 +6,22 @@ This is not a website and it has **no login, signup, user accounts, or admin**. 
 
 ## What it does
 
-When you ask to promote an app or website, the agent:
+When you ask to promote an app or website, the parent skill:
 
-1. Fills a **campaign brief**
+1. Fills a **campaign brief** and **positioning** line
 2. Picks one of **four intensities**: Whisper → Signal → Pulse → Blitz
-3. Builds a **channel plan** with **Free** and **Paid** catalogs kept separate
-4. Can dispatch **docs-agent** to write a full document set (README, getting-started, features, FAQ, changelog, support)
-5. Can dispatch **video-agent** to create a playable walkthrough (HTML player, scenes, captions, script)
-6. Can dispatch **play-store-agent** to promote a **Google Play Store** Android app (listing copy, ASO, graphics brief, release tracks)
-7. Can open a **funding / crowdfunding** track or a **sell the app / sell talent** track
+3. Builds a **channel plan** (Free then Paid) via **channel-scout**
+4. Runs a **claims check** before paid or store copy
+5. Dispatches **subagents** for the slices you need:
+   - Docs, landing, launch posts, emails, press kit, creative matrix
+   - Locale strings, pricing tests, SEO article cluster
+   - Playable walkthrough video
+   - Google Play, Apple App Store, Chrome/Firefox/Edge, OSS launch
+   - Measurement, reviews, retention, partners, community
+   - Funding / crowdfunding, or sell the app / talent
+   - Legal **checklist** only (not contracts)
 
-It **plans** campaigns. It does not open Google Ads or Meta and spend money. It does not manage users of this skill.
+It **plans** campaigns. It does not buy ads or publish to stores.
 
 Public repo: [github.com/klsteele64-tech/promoting-developer-apps](https://github.com/klsteele64-tech/promoting-developer-apps)
 
@@ -41,28 +46,23 @@ Full store-by-store steps: [MARKETPLACE.md](MARKETPLACE.md).
 
 ```
 Build a marketing campaign for my app.
-Compare free vs paid ads for this product.
-Give me all four rollout strategies and recommend one.
-Write documentation for this app.
-Create a walkthrough video of this app.
-Promote my Google Play Store app.
-Draft a Kickstarter / angel funding plan.
+Write landing copy and launch posts.
+Promote my Google Play / App Store / Chrome extension.
+Launch this OSS library.
+Draft a Kickstarter plan.
 Help me sell this app or package my freelance offer.
 ```
 
-In Cursor, slash commands: `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/create-app-docs`, `/create-walkthrough-video`, `/promote-play-store-app`, `/launch-content`, `/funding-plan`, `/sell-app-or-talent`.
+In Cursor, slash commands include `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, and the other slice commands under `commands/`.
 
 ## Package layout
 
 ```
-plugin.json                         Agent Plugins 1.0 (Cursor, ChatGPT, Copilot, …)
-.cursor-plugin/plugin.json          Cursor marketplace manifest
-.codex-plugin/plugin.json           ChatGPT / Codex plugin manifest
-.claude-plugin/plugin.json          Claude Code plugin manifest
-.agents/plugins/marketplace.json    Local ChatGPT / Codex catalog entry
-skills/promoting-developer-apps/    Campaign skill (SKILL.md + catalogs + templates)
-  subagents/                        docs-agent, video-agent, play-store-agent
-agents/                             Cursor plugin agents (same three subagents)
+skills/promoting-developer-apps/    Parent skill
+  subagents/                        All specialized agents
+  references/                       Catalogs and specs
+  assets/                           Templates
+agents/                             Cursor plugin agents
 commands/                           Cursor slash commands
 ```
 

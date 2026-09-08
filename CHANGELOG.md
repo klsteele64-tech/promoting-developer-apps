@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0 — 2026-09-08
+
+- Add **locale-agent** (store/landing/email strings; intensity locale caps; machine copy marked `INFERRED — machine`)
+- Add **pricing-agent** (live SKU first; Whisper no A/B; Signal one alternative; Pulse one 14-day test; Blitz freeze)
+- Add **seo-cluster-agent** (pillar + supports; “Docs that rank” points at this cluster; no invented volume or rank)
+- Commands: `/localize-listings`, `/pricing-plan`, `/seo-cluster`
+
 ## 1.4.0 — 2026-09-08
 
 - Add the remaining campaign subagents: positioning, channel-scout, rollout-planner, claims, social, changelog, landing, email, press-kit, creative, measurement, Apple App Store, extension stores, OSS launch, reviews, retention, partners, community, funding-agent, legal checklist

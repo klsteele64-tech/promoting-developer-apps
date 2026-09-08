@@ -10,7 +10,7 @@ Product (fixed fixture, do not invent extra facts):
 - Proof: 80 waitlist emails, no revenue
 - Budget: $0
 - Constraint: no paid ads
-- Ask: full campaign + docs outline + whether to crowdfund
+- Ask: full campaign + docs + whether to crowdfund
 
 A correct run:
 
@@ -18,4 +18,7 @@ A correct run:
 - Paid table empty or `NONE — budget $0`
 - Free channels from the catalog (IH, waitlist email, Show HN later — not same-day PH+HN+ads)
 - Funding advice: pre-sales / waitlist, not a $1M seed
-- Docs outline marks unknown APIs as UNKNOWN
+- Docs from docs-agent mark unknown APIs as UNKNOWN
+- pricing-agent: live SKU is Pro $12/mo; Whisper/Signal so no shipped A/B
+- locale-agent: source-only unless the user named extras
+- If “docs that rank” is picked, seo-cluster-agent writes `seo/CLUSTER.md`

@@ -11,6 +11,12 @@ Use these when submitting to ChatGPT / Codex (5 positive, 3 negative) and when c
 5. "Create a walkthrough video of the app."
 6. "I need a Kickstarter plan and also a way to sell my freelance development."
 7. "Promote my Google Play Store app."
+8. "Write landing copy and Product Hunt / Show HN posts."
+9. "Promote my iOS App Store app."
+10. "Launch this open-source CLI."
+11. "Localize my Play listing and landing for Spanish and German."
+12. "Should I raise the Pro price or change the trial?"
+13. "Plan an SEO cluster so our docs can rank."
 
 Expected: campaign brief, Free/Paid split, one intensity, no claim that ads were placed.
 

@@ -86,7 +86,7 @@ Any client that implements [agentskills.io](https://agentskills.io/specification
 skills/promoting-developer-apps/SKILL.md
 ```
 
-Docs and walkthroughs are subagents of that skill (`subagents/docs-agent.md`, `subagents/video-agent.md`), not extra `skills/*` packages.
+Docs, video, stores, locale, pricing, SEO cluster, landing, social, email, funding, and the other slices are **subagents** of that skill (`subagents/`), not extra `skills/*` packages. See `references/subagent-index.md`.
 
 Root [`plugin.json`](plugin.json) follows [Agent Plugins 1.0](https://github.com/agentplugins/agent-plugins-spec) so Copilot, VS Code, Kiro, and other conforming hosts can discover `skills/` without a vendor folder.
 
