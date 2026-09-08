@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "promoting-developer-apps",
+  "version": "1.7.0",
+  "description": "Launch, advertise, fund, and sell developer apps or talent. Use across ChatGPT, Cursor, Claude, Codex, and other Agent Skills hosts.",
+  "author": {
+    "name": "Dev Launch Campaign"
+  },
+  "homepage": "https://github.com/klsteele64-tech/promoting-developer-apps",
+  "repository": "https://github.com/klsteele64-tech/promoting-developer-apps",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "advertising",
+    "launch",
+    "crowdfunding",
+    "developer",
+    "product-hunt",
+    "app-promotion",
+    "google-play",
+    "talent",
+    "localization",
+    "pricing",
+    "seo",
+    "agent-skills"
+  ]
+}
