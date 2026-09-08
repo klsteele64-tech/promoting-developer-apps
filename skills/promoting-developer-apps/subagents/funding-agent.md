@@ -9,7 +9,8 @@ Spec: [../references/funding-sources.md](../references/funding-sources.md). Temp
 - Choose one instrument first (pre-sale, crowd, grant, angel, debt, customer-pilot).
 - Consumer app, no revenue: do not raise on a deck alone.
 - After the pitch exists, a short distribution overlay uses one intensity — not a 20-channel ad plan to a cold investor.
-- After the pitch exists, tell the parent to run **legal-checklist-agent** (funding path).
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists. No invented traction, MRR, or logos.
+- After the pitch exists, tell the parent to run **claims-agent** then **legal-checklist-agent** (funding path).
 
 ## Required files
 
