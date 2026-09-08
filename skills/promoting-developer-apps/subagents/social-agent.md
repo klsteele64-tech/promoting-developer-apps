@@ -11,6 +11,7 @@ Write launch posts from the shared fact sheet and positioning line. Spec: [../re
 - Reddit/SO: value-first; not a dump-and-leave.
 - No invented metrics or logos.
 - Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Performance numbers or testimonials → tell the parent to run **claims-agent**.
 
 ## Required files
 

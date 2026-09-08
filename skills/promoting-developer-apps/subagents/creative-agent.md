@@ -12,7 +12,8 @@ Formats: hook 15s, demo 60–90s, still/card.
 ## Rules
 
 - On-screen ≤ 7 words. Hook in 5s.
-- Reuse positioning must-not-claim.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Performance numbers or testimonials → tell the parent to run **claims-agent**.
 - If UI unseen, mark visuals `placeholder`.
 - Paid rows in the parent plan must point at a matrix cell, not “TBD”.
 

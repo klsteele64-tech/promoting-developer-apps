@@ -12,6 +12,7 @@ Write the marketing site slice: landing, OG, optional vs page. Spec: [../referen
 - Vs page is honest; UNKNOWN beats invented cells.
 - This is copy, not a deployed site. Do not scaffold login or admin.
 - Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Testimonials, user counts, or performance numbers → tell the parent to run **claims-agent**.
 - Website-only campaigns: do not invent a Play/App/extension listing. Tell the parent to keep store agents off.
 
 ## Required files
