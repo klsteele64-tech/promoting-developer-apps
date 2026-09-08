@@ -17,6 +17,8 @@ Use these when submitting to ChatGPT / Codex (5 positive, 3 negative) and when c
 11. "Localize my Play listing and landing for Spanish and German."
 12. "Should I raise the Pro price or change the trial?"
 13. "Plan an SEO cluster so our docs can rank."
+14. "Publish my Agent Skill to Cursor, ChatGPT, and Claude."
+15. "Promote this skill to every AI host."
 
 Expected: campaign brief, Free/Paid split, one intensity, no claim that ads were placed.
 

@@ -24,3 +24,4 @@
 - Extension store: Chrome | Firefox | Edge | none
 - Locales (source + extras):
 - Live price / trial / SKUs:
+- Skill hosts: all | named list | none

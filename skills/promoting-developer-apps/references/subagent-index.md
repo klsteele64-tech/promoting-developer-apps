@@ -37,6 +37,7 @@ Do not run every agent on every ask. One-slice asks: that agent + the brief.
 | app-store-agent | Apple App Store / iOS |
 | extension-store-agent | Chrome / Firefox / Edge add-on |
 | oss-launch-agent | Library, CLI, or OSS |
+| skill-distribution-agent | Agent Skill / plugin to all or selected AI hosts |
 
 ## Growth and ops
 

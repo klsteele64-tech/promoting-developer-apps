@@ -15,6 +15,7 @@ When you ask to promote an app or website, the parent skill:
 5. Dispatches **subagents** for the slices you need:
    - Docs, landing, launch posts, emails, press kit, creative matrix
    - Locale strings, pricing tests, SEO article cluster
+   - Publish an Agent Skill to all or selected AI hosts
    - Playable walkthrough video
    - Google Play, Apple App Store, Chrome/Firefox/Edge, OSS launch
    - Measurement, reviews, retention, partners, community
@@ -48,12 +49,13 @@ Full store-by-store steps: [MARKETPLACE.md](MARKETPLACE.md).
 Build a marketing campaign for my app.
 Write landing copy and launch posts.
 Promote my Google Play / App Store / Chrome extension.
+Publish my Agent Skill to Cursor, ChatGPT, and Claude (or all hosts).
 Launch this OSS library.
 Draft a Kickstarter plan.
 Help me sell this app or package my freelance offer.
 ```
 
-In Cursor, slash commands include `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, and the other slice commands under `commands/`.
+In Cursor, slash commands include `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-skill`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, and the other slice commands under `commands/`.
 
 ## Package layout
 

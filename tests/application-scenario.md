@@ -22,3 +22,4 @@ A correct run:
 - pricing-agent: live SKU is Pro $12/mo; Whisper/Signal so no shipped A/B
 - locale-agent: source-only unless the user named extras
 - If “docs that rank” is picked, seo-cluster-agent writes `seo/CLUSTER.md`
+- skill-distribution-agent only if the product is a skill/plugin or the user asked to publish one

@@ -1,6 +1,6 @@
 {
   "name": "promoting-developer-apps",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Reusable launch, advertising, funding, and talent-sales workflows for developer apps and websites.",
   "author": {
     "name": "Dev Launch Campaign"
@@ -32,6 +32,7 @@
       "Localize my Play listing and landing for Spanish.",
       "Plan a pricing test for my Pro plan.",
       "Plan an SEO cluster so our docs can rank.",
+      "Publish my Agent Skill to Cursor, ChatGPT, and Claude.",
       "Draft a crowdfunding and funding plan for this app.",
       "Help me sell this app or package my development talent."
     ],

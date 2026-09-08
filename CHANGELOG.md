@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0 — 2026-09-08
+
+- Add **skill-distribution-agent**: plan listing an Agent Skill / plugin on **all** or **named** AI hosts (Cursor official, cursor.directory, ChatGPT/Codex, Claude, generic Agent Skills, `npx skills`, Copilot/VS Code/Kiro, team marketplace)
+- Catalogs do not fan out — Cursor accept ≠ other hosts
+- Command: `/promote-skill`
+- Plans only: no form submit, no invented “listed”
+
 ## 1.5.0 — 2026-09-08
 
 - Add **locale-agent** (store/landing/email strings; intensity locale caps; machine copy marked `INFERRED — machine`)
