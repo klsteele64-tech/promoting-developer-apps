@@ -86,7 +86,7 @@ Any client that implements [agentskills.io](https://agentskills.io/specification
 skills/promoting-developer-apps/SKILL.md
 ```
 
-Docs, video, stores, locale, pricing, SEO cluster, skill distribution, landing, social, email, funding, and the other slices are **subagents** of that skill (`subagents/`), not extra `skills/*` packages. See `references/subagent-index.md`. To plan listing a skill on all or named AI hosts, dispatch **skill-distribution-agent** (`/promote-skill`).
+Docs, video, stores, locale, pricing, SEO cluster, skill distribution, landing, social, email, funding, and the other slices are **subagents** of that skill (`subagents/`), not extra `skills/*` packages. See `references/subagent-index.md`. To **submit** a skill to all or named AI marketplaces, dispatch **skill-distribution-agent** (`/promote-skill`) and run `scripts/submit-skill-marketplaces.sh`.
 
 Root [`plugin.json`](plugin.json) follows [Agent Plugins 1.0](https://github.com/agentplugins/agent-plugins-spec) so Copilot, VS Code, Kiro, and other conforming hosts can discover `skills/` without a vendor folder.
 

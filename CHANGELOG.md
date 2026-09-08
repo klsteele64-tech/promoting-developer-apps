@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.0 — 2026-09-08
+
+- **skill-distribution-agent now submits** each chosen AI marketplace (Cursor official, cursor.directory, ChatGPT/Codex, Claude CLI, `npx skills`)
+- Script: `scripts/submit-skill-marketplaces.sh` packs the zip, writes filled form packets, attempts CLI adds
+- Claude marketplace manifest: `.claude-plugin/marketplace.json`
+- Statuses: `submitted` | `blocked-on-auth` | `blocked-on-missing-field` | `failed` | `listed` (listed only if the host confirmed)
+- Web portals still need the publisher signed in; the agent fills the form and clicks Submit when a session exists
+
 ## 1.6.0 — 2026-09-08
 
 - Add **skill-distribution-agent**: plan listing an Agent Skill / plugin on **all** or **named** AI hosts (Cursor official, cursor.directory, ChatGPT/Codex, Claude, generic Agent Skills, `npx skills`, Copilot/VS Code/Kiro, team marketplace)

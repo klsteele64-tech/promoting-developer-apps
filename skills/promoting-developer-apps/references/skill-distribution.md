@@ -33,8 +33,7 @@ No public repo → make it public first. Do not invent a marketplace URL.
 
 | Host | Form or CLI | What to send | Auth |
 |------|-------------|--------------|------|
-| Cursor official | Open [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish) while signed into the publisher’s Cursor account. Fill repo URL + name + description. Click **Submit**.
-| Repo `https://github.com/{owner}/{repo}`, `name`, short description from `plugin.json` | Cursor session |
+| Cursor official | Open [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish) while signed into the publisher’s Cursor account. Fill repo URL + name + description. Click **Submit**. | Repo `https://github.com/{owner}/{repo}`, `name`, short description from `plugin.json` | Cursor session |
 | cursor.directory | Open [cursor.directory/plugins/new](https://cursor.directory/plugins/new). Sign in with GitHub or Google. Paste the GitHub repo URL. Click **Submit**. | Same repo URL. Directory auto-detects `skills/*/SKILL.md`, `agents/`, `commands/` | GitHub or Google |
 | ChatGPT / Codex public directory | Open the [OpenAI plugin submission portal](https://developers.openai.com/plugins/deploy/submission). Create plugin → **Skills only**. Upload `promoting-developer-apps-skill.zip` (or `{name}-skill.zip`). Fill listing + 5 positive / 3 negative cases from `tests/marketplace-cases.md`. Submit for review. | Zip from `scripts/pack-chatgpt-skill.sh`. Starter prompts from `.codex-plugin/plugin.json` `defaultPrompt`. Type: skills-only. No MCP URL. | OpenAI org + Apps Management write + verified identity |
 | ChatGPT / Codex local | `codex plugin marketplace add {owner}/{repo}` or upload the zip in ChatGPT skill settings | GitHub URL or zip | Codex/ChatGPT CLI or chat upload |

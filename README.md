@@ -15,14 +15,14 @@ When you ask to promote an app or website, the parent skill:
 5. Dispatches **subagents** for the slices you need:
    - Docs, landing, launch posts, emails, press kit, creative matrix
    - Locale strings, pricing tests, SEO article cluster
-   - Publish an Agent Skill to all or selected AI hosts
+   - Submit an Agent Skill to all or selected AI marketplaces
    - Playable walkthrough video
    - Google Play, Apple App Store, Chrome/Firefox/Edge, OSS launch
    - Measurement, reviews, retention, partners, community
    - Funding / crowdfunding, or sell the app / talent
    - Legal **checklist** only (not contracts)
 
-It **plans** campaigns. It does not buy ads or publish to stores.
+It **plans** campaigns. It does not buy ads or publish to app stores. **Exception:** skill-distribution-agent submits skill-marketplace forms for chosen AI hosts.
 
 Public repo: [github.com/klsteele64-tech/promoting-developer-apps](https://github.com/klsteele64-tech/promoting-developer-apps)
 

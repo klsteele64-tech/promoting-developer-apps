@@ -8,4 +8,4 @@ This repository is the **promoting-developer-apps** skill plugin.
 
 Do not treat docs, video, Play, App Store, locale, pricing, SEO, skill distribution, or any other slice as a sibling marketplace skill. They are subagents of promoting-developer-apps.
 
-Do not build a website, login, signup, user-account system, or admin console. Do not draft legal contracts — checklist only. Plans only: no live ads, no store publish, no marketplace form submit.
+Do not build a website, login, signup, user-account system, or admin console. Do not draft legal contracts — checklist only. Plans only for ads and app stores. **Exception:** skill-distribution-agent submits skill-marketplace forms for the chosen AI hosts. Do not invent “listed.”
