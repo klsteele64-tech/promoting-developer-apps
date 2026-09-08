@@ -14,7 +14,7 @@ Offer is paid or freemium, goal is revenue, or the user asked about price / tria
 - Whisper: no A/B. Signal: name one alternative. Pulse: one 14-day test. Blitz: freeze price.
 - Free tier must reach first success.
 - No invented conversion or “what the market pays”.
-- Product sale vs talent: two SKUs (talent-and-sales).
+- Product sale vs talent: two SKUs via **talent-agent**. Do not blend prices.
 
 ## Required files
 

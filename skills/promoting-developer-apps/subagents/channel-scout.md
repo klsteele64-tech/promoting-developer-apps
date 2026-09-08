@@ -14,6 +14,7 @@ Pick channels from [../references/ad-channels-free.md](../references/ad-channels
 - UNLISTED needs a reason.
 - If Free includes “Docs that rank”, tell the parent to dispatch **seo-cluster-agent** for the asset.
 - If Free includes “Agent Skill catalogs”, tell the parent to dispatch **skill-distribution-agent**.
+- Microsoft Store, Steam, itch.io, F-Droid, and JetBrains marketplace have **no store-pack agent**. You may still pick the channel. Mark the listing pack `UNLISTED — no store agent`. Do not invent listing copy as if play-store-agent / app-store-agent / extension-store-agent ran.
 
 ## Required files
 

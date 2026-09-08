@@ -19,7 +19,8 @@ When you ask to promote an app or website, the parent skill:
    - Playable walkthrough video
    - Google Play, Apple App Store, Chrome/Firefox/Edge, OSS launch
    - Measurement, reviews, retention, partners, community
-   - Funding / crowdfunding, or sell the app / talent
+   - Funding / crowdfunding, or sell the app / talent (**talent-agent**)
+   - Marketing-plan synthesis after the core campaign
    - Legal **checklist** only (not contracts)
 
 It **plans** campaigns. It does not buy ads or publish to app stores. **Exception:** skill-distribution-agent submits skill-marketplace forms for chosen AI hosts.
@@ -55,7 +56,7 @@ Draft a Kickstarter plan.
 Help me sell this app or package my freelance offer.
 ```
 
-In Cursor, slash commands include `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-skill`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, and the other slice commands under `commands/`.
+In Cursor, slash commands include `/launch-campaign`, `/marketing-plan`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-skill`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, `/legal-checklist`, and the other slice commands under `commands/`.
 
 ## Package layout
 

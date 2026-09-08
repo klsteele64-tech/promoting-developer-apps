@@ -29,7 +29,7 @@ Experiments to run (one variable at a time):
 | Feature graphic 1024×500 | | | |
 | Phone 1 (first success) | | | |
 | Phone 2 | | | |
-| Promo video | | hook / demo |
+| Promo video | | hook / demo | |
 
 Capture still needed:
 

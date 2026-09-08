@@ -19,6 +19,8 @@ Use these when submitting to ChatGPT / Codex (5 positive, 3 negative) and when c
 13. "Plan an SEO cluster so our docs can rank."
 14. "Publish my Agent Skill to Cursor, ChatGPT, and Claude."
 15. "Promote this skill to every AI host."
+16. "Help me sell this app, or package my freelance offer."
+17. "Write the marketing plan after we pick channels."
 
 Expected: campaign brief, Free/Paid split, one intensity, no claim that ads were placed.
 

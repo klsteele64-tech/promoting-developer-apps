@@ -38,17 +38,14 @@ need "$SKILL/assets/locale-plan.md"
 need "$SKILL/assets/pricing-plan.md"
 need "$SKILL/assets/seo-cluster.md"
 need "$SKILL/assets/skill-distribution-plan.md"
-need "$ROOT/commands/launch-campaign.md"
-need "$ROOT/commands/localize-listings.md"
-need "$ROOT/commands/pricing-plan.md"
-need "$ROOT/commands/seo-cluster.md"
-need "$ROOT/commands/promote-skill.md"
+need "$SKILL/assets/talent-offer.md"
+need "$SKILL/assets/marketing-plan.md"
 need "$ROOT/scripts/submit-skill-marketplaces.sh"
 need "$ROOT/.claude-plugin/marketplace.json"
-need "$ROOT/commands/promote-play-store-app.md"
-need "$ROOT/commands/promote-app-store.md"
-need "$ROOT/commands/write-landing.md"
-need "$ROOT/commands/write-launch-posts.md"
+
+while IFS= read -r f; do
+  need "$f"
+done < <(find "$ROOT/commands" -type f -name '*.md' | sort)
 
 if [[ -d "$ROOT/skills/creating-app-documents" ]] || [[ -d "$ROOT/skills/creating-app-walkthroughs" ]]; then
   echo "SIBLING SKILLS must be subagents, not skills/*"
@@ -91,12 +88,37 @@ required = {
     "email-agent", "positioning-agent", "channel-scout", "rollout-planner",
     "claims-agent", "funding-agent", "measurement-agent", "legal-checklist-agent",
     "locale-agent", "pricing-agent", "seo-cluster-agent",
-    "skill-distribution-agent",
+    "skill-distribution-agent", "talent-agent", "marketing-plan-agent",
+    "changelog-agent", "creative-agent", "press-kit-agent", "reviews-agent",
+    "retention-agent", "partner-agent", "community-agent",
 }
 have = {p.stem for p in (root / "skills/promoting-developer-apps/subagents").glob("*.md")}
 missing = sorted(required - have)
 if missing:
     print(f"missing subagents: {missing}")
+    sys.exit(1)
+extra = sorted(have - required)
+if extra:
+    print(f"undeclared subagents: {extra}")
+    sys.exit(1)
+agents = {p.stem for p in (root / "agents").glob("*.md")}
+if agents != have:
+    print(f"agents/ must match subagents/ 1:1, only-agents={sorted(agents-have)} only-sub={sorted(have-agents)}")
+    sys.exit(1)
+required_commands = {
+    "launch-campaign", "launch-content", "ad-channels", "rollout-plan",
+    "write-positioning", "claims-check", "create-app-docs", "create-walkthrough-video",
+    "write-landing", "write-launch-posts", "write-ship-notes", "email-sequence",
+    "press-kit", "creative-matrix", "promote-play-store-app", "promote-app-store",
+    "promote-extension", "oss-launch", "campaign-metrics", "review-replies",
+    "retention-plan", "partner-pack", "community-ops", "funding-plan",
+    "legal-checklist", "localize-listings", "pricing-plan", "seo-cluster",
+    "promote-skill", "sell-app-or-talent", "marketing-plan",
+}
+cmds = {p.stem for p in (root / "commands").glob("*.md")}
+missing_cmds = sorted(required_commands - cmds)
+if missing_cmds:
+    print(f"missing commands: {missing_cmds}")
     sys.exit(1)
 cursor = json.loads((root / ".cursor-plugin/plugin.json").read_text())
 if cursor.get("agents") != "./agents/":

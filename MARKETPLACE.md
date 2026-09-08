@@ -6,6 +6,8 @@ Skills-only: no login, user accounts, admin, or OAuth. Hosts identify the person
 
 Public repo: `https://github.com/klsteele64-tech/promoting-developer-apps`
 
+`npx skills add` clones the **default** GitHub branch. That branch must contain `skills/promoting-developer-apps/SKILL.md`. Publishing only to `main` while the default is another branch makes the installer report “No valid skills found.”
+
 ## 1. Cursor
 
 **Local test**
@@ -86,7 +88,7 @@ Any client that implements [agentskills.io](https://agentskills.io/specification
 skills/promoting-developer-apps/SKILL.md
 ```
 
-Docs, video, stores, locale, pricing, SEO cluster, skill distribution, landing, social, email, funding, and the other slices are **subagents** of that skill (`subagents/`), not extra `skills/*` packages. See `references/subagent-index.md`. To **submit** a skill to all or named AI marketplaces, dispatch **skill-distribution-agent** (`/promote-skill`) and run `scripts/submit-skill-marketplaces.sh`.
+Docs, video, stores, locale, pricing, SEO cluster, skill distribution, talent, marketing plan, landing, social, email, funding, and the other slices are **subagents** of that skill (`subagents/`), not extra `skills/*` packages. See `references/subagent-index.md`. To **submit** a skill to catalog AI marketplaces, dispatch **skill-distribution-agent** (`/promote-skill`) and run `scripts/submit-skill-marketplaces.sh`. “All hosts” means the catalog table, not every AI product.
 
 Root [`plugin.json`](plugin.json) follows [Agent Plugins 1.0](https://github.com/agentplugins/agent-plugins-spec) so Copilot, VS Code, Kiro, and other conforming hosts can discover `skills/` without a vendor folder.
 

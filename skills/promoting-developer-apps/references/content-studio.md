@@ -29,7 +29,7 @@ Use when the repo is thin or the offer is talent/for-sale.
 
 1. Run [interview-intake.md](interview-intake.md).
 2. Turn answers into a positioning line: `{ICP} uses {product} to {job} instead of {substitute}`.
-3. Hand answers to docs-agent and/or video-agent. No feature dump.
+3. Hand answers to docs-agent and/or video-agent. Talent or sale → **talent-agent**. No feature dump.
 
 ## Method C — Capture replay
 

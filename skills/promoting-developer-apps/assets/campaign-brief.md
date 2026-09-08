@@ -25,3 +25,6 @@
 - Locales (source + extras):
 - Live price / trial / SKUs:
 - Skill hosts: all | named list | none
+- Listing already live: yes | no | UNKNOWN
+- Privacy policy URL: or UNKNOWN
+- Terms URL: or UNKNOWN
