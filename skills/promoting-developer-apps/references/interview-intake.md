@@ -14,6 +14,10 @@ Use when product facts are missing. Ask in this order. Stop when you can write t
 10. If iOS / extension / OSS: store URL or package, TestFlight or unlisted, language?
 11. Which extra languages or countries need store/landing copy (or source-only)?
 12. If paid/freemium: current price, trial length, and whether price may change this window?
-13. If the product is a skill/plugin: public repo URL, and which AI hosts (all, or named)?
+13. If the product is a skill/plugin: public repo URL, and which AI hosts (catalog all, or named)?
+14. Budget band: $0 / <500 / 500–5k / 5k+?
+15. Intensity, or “recommend”?
+16. Is a store or directory listing already live?
+17. Privacy-policy and terms URLs, or UNKNOWN (do not invent)?
 
 Record answers as bullet facts. Do not polish into marketing copy until the brief exists.
