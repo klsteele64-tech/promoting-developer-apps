@@ -17,3 +17,6 @@
 - Geography / language:
 - Owner / support coverage:
 - Date window:
+- Store: none | Google Play | App Store | both
+- Play package / listing URL:
+- Play track: internal | closed | open | production | UNRELEASED
