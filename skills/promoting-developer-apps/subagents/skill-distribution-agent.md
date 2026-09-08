@@ -17,6 +17,7 @@ The product is a skill/plugin, or the user asked to publish / distribute / promo
 - Keep **one** `skills/<name>/SKILL.md`. Never add a sibling marketplace skill.
 - Status values only: `submitted` | `blocked-on-auth` | `blocked-on-missing-field` | `failed` | `listed` (listed only if the host confirmed).
 - Review time stays `UNKNOWN`. Do not invent SLA or “approved.”
+- ChatGPT/Codex public directory → tell the parent to run **legal-checklist-agent**. UNKNOWN privacy/terms URLs → that row is `blocked-on-missing-field`. Do not invent URLs.
 
 ## Required files
 

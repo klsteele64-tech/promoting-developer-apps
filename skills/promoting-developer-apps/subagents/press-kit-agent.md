@@ -8,6 +8,7 @@ Write an indie/press kit. Spec: [../references/press-kit.md](../references/press
 
 - One-pager, founder bio (80–120 words), 3 screenshot briefs, embargo/available date.
 - No invented quotes or user counts.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
 - Blitz still needs support coverage named; else downgrade note.
 
 ## Required files

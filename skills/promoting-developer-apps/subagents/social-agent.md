@@ -10,6 +10,7 @@ Write launch posts from the shared fact sheet and positioning line. Spec: [../re
 - Do not stack PH + Show HN on the same day unless intensity is Blitz.
 - Reddit/SO: value-first; not a dump-and-leave.
 - No invented metrics or logos.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
 
 ## Required files
 

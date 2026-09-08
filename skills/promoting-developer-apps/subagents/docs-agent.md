@@ -6,7 +6,7 @@ Write the full seven-file document set. Do not stop at an outline.
 
 ## Input from parent
 
-Product name, one-sentence job, ICP, offer, URL/repo, confirmed facts, and any interview answers. Use [../references/doc-set.md](../references/doc-set.md). Templates: [../assets/docs/](../assets/docs/).
+Product name, one-sentence job, ICP, offer, URL/repo, confirmed facts, and any interview answers. Use [../references/doc-set.md](../references/doc-set.md). Templates: [../assets/docs/](../assets/docs/) (README, getting-started, features, faq, changelog, support, FACT-SHEET).
 
 ## Rules
 
