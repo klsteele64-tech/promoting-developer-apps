@@ -45,7 +45,7 @@ Staged production %:
 
 | Channel | Why this product | Asset | CTA | Metric | First action this week |
 |---------|------------------|-------|-----|--------|------------------------|
-| Google Play listing (ASO) | | listing | Install / open | Impressions → conversion | |
+| Google Play listing (ASO) | | | Install / open | Impressions → conversion | |
 
 ## Paid
 
