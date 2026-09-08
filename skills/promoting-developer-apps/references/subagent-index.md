@@ -12,6 +12,8 @@ Do not run every agent on every ask. One-slice asks: that agent + the brief.
 | 2 | rollout-planner | Intensity not chosen |
 | 3 | channel-scout | Free/Paid tables |
 | 4 | claims-agent | Before any paid or store row |
+| 5 | pricing-agent | Paid, freemium, or revenue goal |
+| 6 | locale-agent | Extra languages or store countries |
 
 ## Content (asked or missing)
 
@@ -25,6 +27,7 @@ Do not run every agent on every ask. One-slice asks: that agent + the brief.
 | email-agent | Waitlist or launch mail |
 | creative-agent | Ad/social creative matrix |
 | press-kit-agent | Press or Pulse/Blitz launch |
+| seo-cluster-agent | SEO, blog, or “docs that rank” |
 
 ## Stores and distribution
 

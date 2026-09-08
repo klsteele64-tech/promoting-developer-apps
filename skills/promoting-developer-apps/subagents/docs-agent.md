@@ -14,6 +14,7 @@ Product name, one-sentence job, ICP, offer, URL/repo, confirmed facts, and any i
 - Mark missing facts `UNKNOWN`. Mark guesses `INFERRED`. Never invent APIs, prices, logos, or metrics.
 - Do not invent channels, UI the parent did not confirm, or performance claims.
 - Overwrite existing `docs/app/` files only with user consent.
+- If the parent asked for “docs that rank”, inherit titles from seo-cluster-agent. Do not invent search volume or ranks.
 
 ## Workflow
 

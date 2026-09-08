@@ -17,6 +17,10 @@
 - Geography / language:
 - Owner / support coverage:
 - Date window:
-- Store: none | Google Play | App Store | both
+- Store: none | Google Play | App Store | extension | OSS | both
 - Play package / listing URL:
 - Play track: internal | closed | open | production | UNRELEASED
+- App Store bundle / listing URL:
+- Extension store: Chrome | Firefox | Edge | none
+- Locales (source + extras):
+- Live price / trial / SKUs:

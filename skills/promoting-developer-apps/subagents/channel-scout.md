@@ -12,6 +12,7 @@ Pick channels from [../references/ad-channels-free.md](../references/ad-channels
 - Every row: why this product, asset, CTA, metric, first action this week.
 - Paid also: objective, daily cap, kill criterion.
 - UNLISTED needs a reason.
+- If Free includes “Docs that rank”, tell the parent to dispatch **seo-cluster-agent** for the asset.
 
 ## Required files
 
