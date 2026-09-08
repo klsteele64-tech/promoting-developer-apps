@@ -1,0 +1,32 @@
+{
+  "name": "promoting-developer-apps",
+  "version": "1.0.1",
+  "description": "Reusable launch, advertising, funding, and talent-sales workflows for developer apps and websites.",
+  "author": {
+    "name": "Dev Launch Campaign"
+  },
+  "homepage": "https://github.com/klsteele64-tech/promoting-developer-apps",
+  "repository": "https://github.com/klsteele64-tech/promoting-developer-apps",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "advertising",
+    "launch",
+    "crowdfunding",
+    "developer"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Promoting Developer Apps",
+    "shortDescription": "Campaigns, ads, docs, video, funding, and talent sales for developer products.",
+    "defaultPrompt": [
+      "Build a full marketing campaign for my developer app using promoting-developer-apps.",
+      "Compare free vs paid ad channels for my product and recommend a mix.",
+      "Give me all four rollout strategies from whisper to blitz.",
+      "Generate documentation and a video brief from my repo.",
+      "Draft a crowdfunding and funding plan for this app.",
+      "Help me sell this app or package my development talent."
+    ],
+    "logo": "./assets/logo.svg"
+  }
+}

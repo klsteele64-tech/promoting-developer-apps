@@ -1,0 +1,23 @@
+{
+  "name": "promoting-developer-apps",
+  "version": "1.0.1",
+  "description": "Skill for promoting any developer app or website: free and paid ad catalogs, four rollout intensities, agent-made docs and video, funding, and selling the app or your talent.",
+  "author": {
+    "name": "Dev Launch Campaign"
+  },
+  "homepage": "https://github.com/klsteele64-tech/promoting-developer-apps",
+  "repository": "https://github.com/klsteele64-tech/promoting-developer-apps",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "advertising",
+    "launch",
+    "crowdfunding",
+    "developer",
+    "product-hunt",
+    "app-promotion"
+  ],
+  "logo": "assets/logo.svg",
+  "skills": "./skills/",
+  "commands": "./commands/"
+}
