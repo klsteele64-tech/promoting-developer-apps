@@ -16,7 +16,7 @@ Never recommend paid spend on a $0 budget. If budget is unknown, propose a $20â€
 | Microsoft Ads (Bing) | Cheaper search, older ICP | Conversions | Import Google campaigns; lower volume |
 | Apple Search Ads | iOS apps | Installs | Exact match on category + brand |
 | Amazon Ads | Products sold on Amazon | Sales | Irrelevant unless listed there |
-| App Store search ads (Google UAC / ASA) | Mobile installs | Installs / ROAS | Need store assets + MMP later |
+| Google App campaigns (Android) | Play / Android installs | Installs / in-app actions | Production or open-testing listing required; one geo first |
 
 ## Social and feed ads
 

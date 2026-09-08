@@ -50,7 +50,10 @@ For each pick include: why this product, asset, CTA, metric, first action this w
 | Channel | Best for | Asset | Default metric |
 |---------|----------|-------|----------------|
 | Apple App Store listing | iOS | Screenshots, preview, keywords | Impressions → installs |
-| Google Play listing | Android | Store listing + short video | Store conversion |
+| Google Play listing (ASO) | Android | Title, short + full desc, graphics | Impressions → store conversion |
+| Play pre-registration | Unreleased Android | Pre-reg listing + notify | Pre-reg count |
+| Play testing track (closed/open) | Unproven Android build | Track link + feedback prompt | Crash-free + happy paths |
+| F-Droid listing | OSS Android | Metadata + source | Sideload installs |
 | Microsoft Store | Windows apps | Listing | Installs |
 | Chrome / Firefox / Edge add-on stores | Extensions | Store listing | Weekly users |
 | Steam / itch.io (organic page) | Games | Page + trailer | Wishlists |
