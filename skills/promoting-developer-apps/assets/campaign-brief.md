@@ -17,6 +17,7 @@
 - Geography / language:
 - Owner / support coverage:
 - Date window:
+- Surface: app | website | skill | oss | talent
 - Store: none | Google Play | App Store | extension | OSS | both
 - Play package / listing URL:
 - Play track: internal | closed | open | production | UNRELEASED

@@ -2,7 +2,7 @@
 
 Use when product facts are missing. Ask in this order. Stop when you can write the brief.
 
-1. What does a user do in the first 60 seconds?
+1. What does a user do in the first 60 seconds? Is this an app, website, skill, OSS, or talent offer?
 2. Who fails today without this product?
 3. What is the substitute they already use?
 4. What is free vs paid, and what is the price?
