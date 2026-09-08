@@ -1,6 +1,6 @@
 {
   "name": "promoting-developer-apps",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Skill for promoting any developer app or website: free and paid ad catalogs, four rollout intensities, agent-made docs and video, funding, and selling the app or your talent.",
   "author": {
     "name": "Dev Launch Campaign"
@@ -19,5 +19,6 @@
   ],
   "logo": "assets/logo.svg",
   "skills": "./skills/",
-  "commands": "./commands/"
+  "commands": "./commands/",
+  "agents": "./agents/"
 }
