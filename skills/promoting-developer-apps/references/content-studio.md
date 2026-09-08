@@ -2,8 +2,13 @@
 
 Pick a source method, then dispatch a subagent of **promoting-developer-apps**:
 
-- Documents → **docs-agent** ([../subagents/docs-agent.md](../subagents/docs-agent.md)) — write the seven files
-- Walkthrough / demo video → **video-agent** ([../subagents/video-agent.md](../subagents/video-agent.md)) — write the playable player
+- Documents → **docs-agent** ([../subagents/docs-agent.md](../subagents/docs-agent.md))
+- Walkthrough → **video-agent** ([../subagents/video-agent.md](../subagents/video-agent.md))
+- Landing / OG / vs → **landing-agent** ([../subagents/landing-agent.md](../subagents/landing-agent.md))
+- Launch posts → **social-agent** ([../subagents/social-agent.md](../subagents/social-agent.md))
+- Google Play → **play-store-agent**; Apple → **app-store-agent**; extension → **extension-store-agent**
+- Docs that rank / SEO cluster → **seo-cluster-agent** ([../subagents/seo-cluster-agent.md](../subagents/seo-cluster-agent.md)); docs-agent writes the files
+- Promo video hook → video-agent
 
 Do not stop at the old outline/brief templates when the user asked to create docs or a video. The parent does not implement those files; it dispatches.
 
@@ -46,8 +51,9 @@ Spawn (or simulate) four workstreams at once:
 |--------|--------|
 | docs-agent | Seven-file document set |
 | video-agent | Playable walkthrough + SRT + script |
-| social-agent | PH first comment, Show HN draft, X thread (8–12), LinkedIn post |
-| changelog-agent | Last 3 ship notes in customer language |
+| landing-agent | Landing + OG + vs |
+| social-agent | PH first comment, Show HN, X thread, LinkedIn |
+| changelog-agent | Last 3 ship notes |
 
 Rules:
 

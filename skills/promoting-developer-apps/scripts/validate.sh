@@ -18,36 +18,33 @@ need "$ROOT/.cursor-plugin/plugin.json"
 need "$ROOT/.codex-plugin/plugin.json"
 need "$ROOT/.claude-plugin/plugin.json"
 need "$SKILL/SKILL.md"
-need "$SKILL/references/ad-channels-free.md"
-need "$SKILL/references/ad-channels-paid.md"
-need "$SKILL/references/rollout-playbooks.md"
-need "$SKILL/references/content-studio.md"
-need "$SKILL/references/funding-sources.md"
-need "$SKILL/references/talent-and-sales.md"
-need "$SKILL/references/interview-intake.md"
-need "$SKILL/references/doc-set.md"
-need "$SKILL/references/walkthrough-production.md"
-need "$SKILL/subagents/docs-agent.md"
-need "$SKILL/subagents/video-agent.md"
-need "$SKILL/assets/campaign-brief.md"
-need "$SKILL/assets/marketing-plan.md"
-need "$SKILL/assets/channel-plan.md"
-need "$SKILL/assets/launch-calendar.md"
-need "$SKILL/assets/docs-outline.md"
-need "$SKILL/assets/video-brief.md"
-need "$SKILL/assets/funding-pitch.md"
-need "$SKILL/assets/talent-offer.md"
-need "$SKILL/assets/player.html"
-need "$SKILL/assets/docs/FACT-SHEET.md"
-need "$SKILL/assets/docs/README.md"
-need "$SKILL/assets/docs/getting-started.md"
-need "$ROOT/agents/docs-agent.md"
-need "$ROOT/agents/video-agent.md"
-need "$ROOT/commands/launch-campaign.md"
-need "$ROOT/commands/create-app-docs.md"
-need "$ROOT/commands/create-walkthrough-video.md"
+need "$SKILL/references/subagent-index.md"
 need "$ROOT/MARKETPLACE.md"
 need "$ROOT/README.md"
+
+while IFS= read -r f; do
+  need "$f"
+done < <(find "$SKILL/subagents" "$SKILL/references" "$ROOT/agents" -type f -name '*.md' | sort)
+
+need "$SKILL/assets/player.html"
+need "$SKILL/assets/play-store-plan.md"
+need "$SKILL/assets/app-store-plan.md"
+need "$SKILL/assets/positioning.md"
+need "$SKILL/assets/social-pack.md"
+need "$SKILL/assets/landing.md"
+need "$SKILL/assets/claims-check.md"
+need "$SKILL/assets/legal-checklist.md"
+need "$SKILL/assets/locale-plan.md"
+need "$SKILL/assets/pricing-plan.md"
+need "$SKILL/assets/seo-cluster.md"
+need "$ROOT/commands/launch-campaign.md"
+need "$ROOT/commands/localize-listings.md"
+need "$ROOT/commands/pricing-plan.md"
+need "$ROOT/commands/seo-cluster.md"
+need "$ROOT/commands/promote-play-store-app.md"
+need "$ROOT/commands/promote-app-store.md"
+need "$ROOT/commands/write-landing.md"
+need "$ROOT/commands/write-launch-posts.md"
 
 if [[ -d "$ROOT/skills/creating-app-documents" ]] || [[ -d "$ROOT/skills/creating-app-walkthroughs" ]]; then
   echo "SIBLING SKILLS must be subagents, not skills/*"
@@ -84,14 +81,35 @@ skill_dirs = [p for p in (root / "skills").iterdir() if p.is_dir() and (p / "SKI
 if [p.name for p in skill_dirs] != [expected]:
     print(f"skills/ must contain only {expected}, found {[p.name for p in skill_dirs]}")
     sys.exit(1)
+required = {
+    "docs-agent", "video-agent", "play-store-agent", "app-store-agent",
+    "extension-store-agent", "oss-launch-agent", "social-agent", "landing-agent",
+    "email-agent", "positioning-agent", "channel-scout", "rollout-planner",
+    "claims-agent", "funding-agent", "measurement-agent", "legal-checklist-agent",
+    "locale-agent", "pricing-agent", "seo-cluster-agent",
+}
+have = {p.stem for p in (root / "skills/promoting-developer-apps/subagents").glob("*.md")}
+missing = sorted(required - have)
+if missing:
+    print(f"missing subagents: {missing}")
+    sys.exit(1)
 cursor = json.loads((root / ".cursor-plugin/plugin.json").read_text())
 if cursor.get("agents") != "./agents/":
     print(".cursor-plugin/plugin.json must set agents to ./agents/")
     sys.exit(1)
+vers = set()
 for rel in ["plugin.json", ".cursor-plugin/plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json"]:
-    json.loads((root / rel).read_text())
+    data = json.loads((root / rel).read_text())
+    vers.add(data.get("version"))
+skill_ver = re.search(r'^  version:\s*"([^"]+)"', fm.group(1), re.M)
+if skill_ver:
+    vers.add(skill_ver.group(1))
+if len(vers) != 1:
+    print(f"plugin/SKILL versions must match, found {sorted(vers)}")
+    sys.exit(1)
 print("frontmatter and JSON OK")
 print(f"description chars: {len(description)}")
+print(f"subagents: {len(have)}")
 PY
 
 while IFS= read -r rel; do

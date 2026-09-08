@@ -15,7 +15,7 @@ Pick one intensity. Write the other three as named alternatives (3–5 lines eac
 4. Daily notes: activation, confusion, "would you pay?"
 5. Kill or iterate before any public launch.
 
-**Assets:** short private note, feedback form, changelog for testers.
+**Assets:** short private note, feedback form, changelog for testers. Source language only. One live SKU, no price A/B.
 
 **Success:** 5+ completed happy paths and a sharper ICP sentence.
 
@@ -34,6 +34,7 @@ Pick one intensity. Write the other three as named alternatives (3–5 lines eac
 4. Two support posts: founder story + how-to.
 5. Email existing users the morning of launch.
 6. Optional $20–50/day search test on 5 keywords only.
+7. Source + one extra locale if asked. Name one price alternative; do not ship it.
 
 **Success:** A screenshotable public thread + measurable CTA (waitlist or signup).
 
@@ -53,6 +54,8 @@ Pick one intensity. Write the other three as named alternatives (3–5 lines eac
 5. Weekly retro: CAC proxy, activation, qualitative objections.
 
 **Budget split default:** 50% search, 25% social or Reddit, 25% sponsorship.
+
+**Locale / price:** source + up to 3 extras. One 14-day test: price **or** trial **or** SKU. SEO: pillar + 5 if “docs that rank”.
 
 **Success:** Repeatable acquisition at or below a stated ceiling.
 
@@ -76,6 +79,7 @@ Pick one intensity. Write the other three as named alternatives (3–5 lines eac
 - Disclosure on every paid creator.
 - Support SLA: replies same day or downgrade to Pulse.
 - Brand-safety: no fake scarcity, no purchased upvotes.
+- Freeze the live price. Source + up to 3 locales only if already shipping them.
 
 **Success:** Spike that retains ≥ 20% of new actives at day 7, or a funding/sale event the campaign was built for.
 
@@ -91,3 +95,7 @@ Pick one intensity. Write the other three as named alternatives (3–5 lines eac
 | Traction + deadline (PH day, fundraise, sale) | Blitz |
 
 If evidence is mixed, pick the **softer** mode.
+
+Play Store / Android: **play-store-agent**. iOS: **app-store-agent** (Whisper = TestFlight). Extensions: **extension-store-agent**. OSS: **oss-launch-agent**. App campaigns / ASA only when budget is not $0.
+
+Full campaigns also dispatch positioning-agent, channel-scout, claims-agent. Paid/freemium → pricing-agent. Extra languages → locale-agent. “Docs that rank” → seo-cluster-agent. Pulse/Blitz add press-kit-agent, measurement-agent, retention-agent.
