@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.8.2 — 2026-09-08
+
+- Remaining public-copy agents inherit must-not-claim: docs, video, changelog, reviews, community, retention, partner, funding, talent, skill-distribution, marketing-plan, channel-scout, pricing, creative
+- `/promote-skill`, `/funding-plan`, and `/sell-app-or-talent` run **claims-agent** before listing/pitch copy; `/partner-pack` runs legal-checklist on public affiliate pages
+- Landing, social, email, press, OSS, and creative tell the parent to run claims-agent when testimonials or performance numbers appear
+- `validate.sh` requires all seven docs templates, must-not-claim on public-copy subagents, and claims/legal on skill-submit, funding, sale, and partner commands
+
+## 1.8.1 — 2026-09-08
+
+- Close dispatch holes: one-slice store, paid, website, funding, and skill-submit paths now run **claims-agent** and/or **legal-checklist-agent**
+- Add `/promote-website` (landing + channels; no Play/App/extension agents)
+- Deliverables name runtime files (`positioning/POSITIONING.md`, `campaign/CHANNEL-PLAN.md`, `claims/CHECK.md`) instead of empty templates
+- Fix Cursor `agents/positioning-agent.md` so it loads `subagents/positioning-agent.md`
+- Store, channel-scout, skill-distribution, and partner agents return legal/claims handoffs
+- Landing, social, email, press, OSS, and store agents inherit must-not-claim
+- Docs templates now include features, FAQ, changelog, and support
+- `validate.sh` checks agent load paths, legal/claims command wiring, runtime deliverable names, and marketplace.json versions
+
 ## 1.8.0 — 2026-09-08
 
 - Add **talent-agent** (sell-app / sell-talent / two SKUs). `/sell-app-or-talent` now loads the parent skill and dispatches it

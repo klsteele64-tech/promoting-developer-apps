@@ -9,6 +9,8 @@ Spec: [../references/community-ops.md](../references/community-ops.md). Template
 - Welcome, office hours, what not to dump (raw launch posts).
 - Contribute-first. Same Reddit/SO rules as the free catalog.
 - Whisper: one community the founder already belongs to.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Mark missing facts `UNKNOWN`. Do not invent member counts or logos.
 
 ## Required files
 

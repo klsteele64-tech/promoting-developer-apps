@@ -9,6 +9,8 @@ Spec: [../references/partners-affiliates.md](../references/partners-affiliates.m
 - One-pager, unique URL + UTM, disclosure line (FTC).
 - Last-click or written rule. Price/commission UNKNOWN if not given.
 - Two SKUs if product + talent: do not blend.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Paid partner mentions or a public affiliate page → tell the parent to run **legal-checklist-agent** (FTC disclosure row).
 
 ## Required files
 

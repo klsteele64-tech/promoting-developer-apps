@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Launch, advertise, fund, and sell developer apps or talent.",
-    "version": "1.8.0"
+    "version": "1.8.2"
   },
   "plugins": [
     {
       "name": "promoting-developer-apps",
       "source": "./",
       "description": "Promote developer apps and websites: advertising catalogs, rollout playbooks, content studio, funding, talent sales, and skill-marketplace submits.",
-      "version": "1.8.0",
+      "version": "1.8.2",
       "skills": ["./skills/promoting-developer-apps"]
     }
   ]

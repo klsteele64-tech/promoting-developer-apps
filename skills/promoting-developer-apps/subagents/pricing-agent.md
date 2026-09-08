@@ -14,6 +14,7 @@ Offer is paid or freemium, goal is revenue, or the user asked about price / tria
 - Whisper: no A/B. Signal: name one alternative. Pulse: one 14-day test. Blitz: freeze price.
 - Free tier must reach first success.
 - No invented conversion or “what the market pays”.
+- Do not add performance claims to the price card. Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
 - Product sale vs talent: two SKUs via **talent-agent**. Do not blend prices.
 
 ## Required files

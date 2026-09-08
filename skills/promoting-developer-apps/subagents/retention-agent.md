@@ -15,6 +15,8 @@ Spec: [../references/retention.md](../references/retention.md). Template: [../as
 
 - Pulse+ default. Whisper: skip public win-back.
 - No dark patterns. No “rate to continue”.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Mark missing facts `UNKNOWN`. Do not invent retention rates.
 
 ## Required files
 

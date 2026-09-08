@@ -11,6 +11,8 @@ Spec: [../references/oss-launch.md](../references/oss-launch.md). Template: [../
 - Show HN **or** a niche list — not PH+HN the same day unless Blitz.
 - Funding overlay: Sponsors / Open Collective / pre-sales, not a seed deck.
 - Contribute-first on forums.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Performance numbers or testimonials in the README hero → tell the parent to run **claims-agent**.
 
 ## Required files
 

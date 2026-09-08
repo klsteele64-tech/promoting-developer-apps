@@ -40,6 +40,13 @@ need "$SKILL/assets/seo-cluster.md"
 need "$SKILL/assets/skill-distribution-plan.md"
 need "$SKILL/assets/talent-offer.md"
 need "$SKILL/assets/marketing-plan.md"
+need "$SKILL/assets/docs/README.md"
+need "$SKILL/assets/docs/getting-started.md"
+need "$SKILL/assets/docs/FACT-SHEET.md"
+need "$SKILL/assets/docs/features.md"
+need "$SKILL/assets/docs/faq.md"
+need "$SKILL/assets/docs/changelog.md"
+need "$SKILL/assets/docs/support.md"
 need "$ROOT/scripts/submit-skill-marketplaces.sh"
 need "$ROOT/.claude-plugin/marketplace.json"
 
@@ -113,21 +120,69 @@ required_commands = {
     "promote-extension", "oss-launch", "campaign-metrics", "review-replies",
     "retention-plan", "partner-pack", "community-ops", "funding-plan",
     "legal-checklist", "localize-listings", "pricing-plan", "seo-cluster",
-    "promote-skill", "sell-app-or-talent", "marketing-plan",
+    "promote-skill", "sell-app-or-talent", "marketing-plan", "promote-website",
 }
 cmds = {p.stem for p in (root / "commands").glob("*.md")}
 missing_cmds = sorted(required_commands - cmds)
 if missing_cmds:
     print(f"missing commands: {missing_cmds}")
     sys.exit(1)
+for agent in sorted(have):
+    text = (root / "agents" / f"{agent}.md").read_text()
+    needle = f"subagents/{agent}.md"
+    if needle not in text:
+        print(f"agents/{agent}.md must load {needle}")
+        sys.exit(1)
+legal_cmds = {
+    "promote-play-store-app", "promote-app-store", "promote-extension",
+    "funding-plan", "sell-app-or-talent", "ad-channels", "promote-website",
+    "launch-campaign", "promote-skill", "partner-pack",
+}
+for name in sorted(legal_cmds):
+    text = (root / "commands" / f"{name}.md").read_text()
+    if "legal-checklist" not in text:
+        print(f"commands/{name}.md must dispatch or mention legal-checklist on store/paid/funding/sale/submit")
+        sys.exit(1)
+claims_cmds = {
+    "promote-play-store-app", "promote-app-store", "promote-extension",
+    "ad-channels", "promote-website", "launch-campaign", "promote-skill",
+    "funding-plan", "sell-app-or-talent",
+}
+inherit_agents = {
+    "docs-agent", "video-agent", "landing-agent", "social-agent", "changelog-agent",
+    "email-agent", "press-kit-agent", "creative-agent", "play-store-agent",
+    "app-store-agent", "extension-store-agent", "oss-launch-agent", "reviews-agent",
+    "retention-agent", "partner-agent", "community-agent", "funding-agent",
+    "talent-agent", "skill-distribution-agent", "locale-agent", "seo-cluster-agent",
+    "marketing-plan-agent", "channel-scout", "pricing-agent",
+}
+for name in sorted(inherit_agents):
+    text = (root / "skills/promoting-developer-apps/subagents" / f"{name}.md").read_text()
+    if "must-not-claim" not in text:
+        print(f"subagents/{name}.md must inherit must-not-claim from positioning")
+        sys.exit(1)
+for name in sorted(claims_cmds):
+    text = (root / "commands" / f"{name}.md").read_text()
+    if "claims-agent" not in text and "claims-check" not in text:
+        print(f"commands/{name}.md must run claims-agent before paid or store copy")
+        sys.exit(1)
+skill_md = (root / rel).read_text()
+for needle in ("campaign/CHANNEL-PLAN.md", "positioning/POSITIONING.md", "campaign/CALENDAR.md", "claims/CHECK.md"):
+    if needle not in skill_md:
+        print(f"{rel} deliverables must name runtime file {needle}")
+        sys.exit(1)
 cursor = json.loads((root / ".cursor-plugin/plugin.json").read_text())
 if cursor.get("agents") != "./agents/":
     print(".cursor-plugin/plugin.json must set agents to ./agents/")
     sys.exit(1)
 vers = set()
-for rel in ["plugin.json", ".cursor-plugin/plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json"]:
-    data = json.loads((root / rel).read_text())
+for rel_json in ["plugin.json", ".cursor-plugin/plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json"]:
+    data = json.loads((root / rel_json).read_text())
     vers.add(data.get("version"))
+market = json.loads((root / ".claude-plugin/marketplace.json").read_text())
+vers.add(market.get("metadata", {}).get("version"))
+for plug in market.get("plugins", []):
+    vers.add(plug.get("version"))
 skill_ver = re.search(r'^  version:\s*"([^"]+)"', fm.group(1), re.M)
 if skill_ver:
     vers.add(skill_ver.group(1))

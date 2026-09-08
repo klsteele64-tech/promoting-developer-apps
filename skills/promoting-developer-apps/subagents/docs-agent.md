@@ -6,13 +6,14 @@ Write the full seven-file document set. Do not stop at an outline.
 
 ## Input from parent
 
-Product name, one-sentence job, ICP, offer, URL/repo, confirmed facts, and any interview answers. Use [../references/doc-set.md](../references/doc-set.md). Templates: [../assets/docs/](../assets/docs/).
+Product name, one-sentence job, ICP, offer, URL/repo, confirmed facts, and any interview answers. Use [../references/doc-set.md](../references/doc-set.md). Templates: [../assets/docs/](../assets/docs/) (README, getting-started, features, faq, changelog, support, FACT-SHEET).
 
 ## Rules
 
 - Full prose. Each file must stand alone if opened first.
 - Mark missing facts `UNKNOWN`. Mark guesses `INFERRED`. Never invent APIs, prices, logos, or metrics.
 - Do not invent channels, UI the parent did not confirm, or performance claims.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
 - Overwrite existing `docs/app/` files only with user consent.
 - If the parent asked for “docs that rank”, inherit titles from seo-cluster-agent. Do not invent search volume or ranks.
 

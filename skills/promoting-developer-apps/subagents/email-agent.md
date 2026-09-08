@@ -16,6 +16,8 @@ Write a four-touch sequence. Spec: [../references/email-sequences.md](../referen
 - One CTA per email. Same UTM campaign.
 - Subject ≤ 50 characters. No fake urgency.
 - $0 / no list → write the copy anyway; say list size UNKNOWN.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Performance numbers or testimonials → tell the parent to run **claims-agent**.
 
 ## Required files
 

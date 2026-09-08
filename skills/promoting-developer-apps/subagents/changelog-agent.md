@@ -9,6 +9,7 @@ Write the last 3 ship notes in customer language. Spec: [../references/changelog
 - Customer jobs, not commit hashes.
 - UNKNOWN if the repo has no recent ships.
 - Reuse the positioning CTA.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
 
 ## Required files
 

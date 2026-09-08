@@ -12,7 +12,8 @@ The user asked to sell the app, license it, package freelance / staff-aug talent
 
 - Choose **sell-app**, **sell-talent**, or **two SKUs** (product + separate transition retainer). Do not mix into one price.
 - No invented MRR, logos, or buyer interest. Thin metrics → rebuild-cost or talent path.
-- Contractor IP assignment is UNKNOWN until the user confirms. Do not list a sale as public-ready if IP is UNKNOWN — tell the parent to run **legal-checklist-agent**.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
+- Contractor IP assignment is UNKNOWN until the user confirms. Do not list a sale as public-ready if IP is UNKNOWN — tell the parent to run **claims-agent** then **legal-checklist-agent**.
 - Sale venues stay in the spec table. Do not invent a marketplace.
 - Talent channels stay out of the product ad table. Return them as a separate Free/Paid note for the parent.
 

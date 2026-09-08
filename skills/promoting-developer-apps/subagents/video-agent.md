@@ -13,6 +13,7 @@ Product name, job, ICP, CTA/URL, walkthrough shape (default: demo), and any insp
 - HTML player is the walkthrough. Do not say "video done" unless `walkthrough/index.html` plays.
 - `placeholder: true` on every scene whose UI was not inspected or recorded. Do not fake UI.
 - Do not invent channels, APIs, prices, or metrics.
+- Inherit must-not-claim from `positioning/POSITIONING.md` when it exists.
 - Keep `index.html` self-contained (no CDN).
 
 ## Shapes

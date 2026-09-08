@@ -7,6 +7,7 @@ Pick a source method, then dispatch a subagent of **promoting-developer-apps**:
 - Landing / OG / vs → **landing-agent** ([../subagents/landing-agent.md](../subagents/landing-agent.md))
 - Launch posts → **social-agent** ([../subagents/social-agent.md](../subagents/social-agent.md))
 - Google Play → **play-store-agent**; Apple → **app-store-agent**; extension → **extension-store-agent**
+- Website-only → **landing-agent** (and **seo-cluster-agent** if docs should rank). Do not dispatch store agents.
 - Docs that rank / SEO cluster → **seo-cluster-agent** ([../subagents/seo-cluster-agent.md](../subagents/seo-cluster-agent.md)); docs-agent writes the files
 - Promo video hook → video-agent
 
