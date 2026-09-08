@@ -1,0 +1,19 @@
+{
+  "name": "promoting-developer-apps",
+  "owner": {
+    "name": "Dev Launch Campaign",
+    "email": "kasey@steele.bz"
+  },
+  "metadata": {
+    "description": "Launch, advertise, fund, and sell developer apps or talent.",
+    "version": "1.7.0"
+  },
+  "plugins": [
+    {
+      "name": "promoting-developer-apps",
+      "source": "./",
+      "description": "Promote developer apps and websites: advertising catalogs, rollout playbooks, content studio, funding, talent sales, and skill-marketplace submits.",
+      "version": "1.7.0"
+    }
+  ]
+}
