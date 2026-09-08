@@ -1,0 +1,19 @@
+# Campaign brief
+
+- Product name:
+- One-sentence job-to-be-done:
+- URL / repo:
+- Primary audience (one segment):
+- Substitute they use today:
+- Offer type: free | freemium | paid | OSS | talent | for-sale
+- Price / terms:
+- Primary goal: users | revenue | waitlist | funding | sale | hiring
+- Proof (users, revenue, stars, waitlist):
+- Budget band: $0 | <500 | 500–5k | 5k+ | unknown
+- Constraints:
+- Chosen intensity: whisper | signal | pulse | blitz
+- Why this intensity:
+- Must-not-claim:
+- Geography / language:
+- Owner / support coverage:
+- Date window:
