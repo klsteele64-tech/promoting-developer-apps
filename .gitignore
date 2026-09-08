@@ -3,6 +3,8 @@
 node_modules/
 .tmp/
 dist/
-/skill-distribution/
+/skill-distribution/*
+!/skill-distribution/PLAN.md
+!/skill-distribution/SUBMISSIONS.md
 .agents/skills/
 skills-lock.json
