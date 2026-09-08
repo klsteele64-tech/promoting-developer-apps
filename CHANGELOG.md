@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 — 2026-09-08
+
+- Feature: **creating-app-documents** writes a seven-file document set (`docs/app/`)
+- Feature: **creating-app-walkthroughs** writes a playable HTML walkthrough, scenes, SRT, and script (`walkthrough/`)
+- Commands: `/create-app-docs`, `/create-walkthrough-video`
+- Campaign skill now hands docs and video work to those two skills
+
 ## 1.0.1 — 2026-09-08
 
 - Scope lock: marketplace skill only — no login, signup, user accounts, or admin
