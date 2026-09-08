@@ -4,7 +4,7 @@ description: Use when a developer needs to promote an app or website, plan free 
 license: MIT
 metadata:
   author: Dev Launch Campaign
-  version: "1.8.0"
+  version: "1.8.1"
   category: marketing
 ---
 
@@ -22,7 +22,7 @@ Every specialized slice is a **subagent of this skill**. The parent dispatches. 
 
 Ask only what is still unknown. Inspect README / landing copy first if present.
 
-Product, one-sentence job, URL/repo, one ICP, offer (free/freemium/paid/OSS/talent/for-sale), goal, budget band ($0 / <500 / 500–5k / 5k+), constraints, intensity (or "recommend"), store (none / Play / App Store / extension / both), listing already live, privacy/terms URLs or UNKNOWN.
+Product, one-sentence job, URL/repo, one ICP, offer (free/freemium/paid/OSS/talent/for-sale), surface (app / website / skill / oss / talent), goal, budget band ($0 / <500 / 500–5k / 5k+), constraints, intensity (or "recommend"), store (none / Play / App Store / extension / both), listing already live, privacy/terms URLs or UNKNOWN.
 
 Write [assets/campaign-brief.md](assets/campaign-brief.md). Missing facts: [references/interview-intake.md](references/interview-intake.md).
 
@@ -38,10 +38,10 @@ Write [assets/campaign-brief.md](assets/campaign-brief.md). Missing facts: [refe
 8. Content / store / growth slices → dispatch only the agents that apply (table below). SEO / “docs that rank” → **seo-cluster-agent**. Pulse/Blitz → **measurement-agent**, **press-kit-agent**, **retention-agent**. Method picker: [references/content-studio.md](references/content-studio.md).
 9. Product is a skill/plugin, or “publish / submit to AI hosts” → **skill-distribution-agent** ([subagents/skill-distribution-agent.md](subagents/skill-distribution-agent.md)). Ask all vs named hosts, then **submit** each chosen form or CLI. “All AI systems” = the catalog table, not every host on earth.
 10. Money goal → **funding-agent**. Talent or sale → **talent-agent** ([subagents/talent-agent.md](subagents/talent-agent.md)).
-11. Store, paid row, funding, or a public sale listing → **legal-checklist-agent** ([subagents/legal-checklist-agent.md](subagents/legal-checklist-agent.md)).
-12. Website-only (store = none): landing + SEO + channels. Do not dispatch play/app/extension store agents.
+11. Store, paid row, funding, or a public sale listing → **legal-checklist-agent** ([subagents/legal-checklist-agent.md](subagents/legal-checklist-agent.md)). One-slice slash commands (`/promote-play-store-app`, `/ad-channels`, `/funding-plan`, `/promote-website`, …) still run this step. Do not skip because the user asked for one slice.
+12. Website-only (store = none, or surface = website): **landing-agent** + **channel-scout**. SEO / “docs that rank” → **seo-cluster-agent**. Launch posts → **social-agent**. Do not dispatch play/app/extension store agents. Command: `/promote-website`.
 13. Live listing → **reviews-agent**.
-14. Filled runtime files (`marketing/PLAN.md`, `positioning/POSITIONING.md`, …) win over empty `assets/` templates. Do not re-emit a blank template on top of a filled pack. Emit any remaining unused templates only if that slice never ran.
+14. Filled runtime files (`marketing/PLAN.md`, `positioning/POSITIONING.md`, `campaign/CHANNEL-PLAN.md`, …) win over empty `assets/` templates. Do not re-emit a blank template on top of a filled pack. Emit any remaining unused templates only if that slice never ran.
 
 ## Intensities
 
@@ -75,16 +75,16 @@ Docs = **docs-agent**. Video = **video-agent** (`walkthrough/index.html`). Landi
 
 ## Deliverables (this order)
 
-1. Campaign brief
-2. Positioning — [assets/positioning.md](assets/positioning.md)
-3. Marketing plan — `marketing/PLAN.md` ([assets/marketing-plan.md](assets/marketing-plan.md))
-4. Channel plan — [assets/channel-plan.md](assets/channel-plan.md)
-5. 14-day calendar — [assets/launch-calendar.md](assets/launch-calendar.md)
-6. Claims check — [assets/claims-check.md](assets/claims-check.md)
+1. Campaign brief — fill [assets/campaign-brief.md](assets/campaign-brief.md)
+2. Positioning — `positioning/POSITIONING.md` (template [assets/positioning.md](assets/positioning.md))
+3. Marketing plan — `marketing/PLAN.md` (template [assets/marketing-plan.md](assets/marketing-plan.md))
+4. Channel plan — `campaign/CHANNEL-PLAN.md` (template [assets/channel-plan.md](assets/channel-plan.md))
+5. Intensity + 14-day calendar — `campaign/INTENSITY.md`, `campaign/CALENDAR.md` (template [assets/launch-calendar.md](assets/launch-calendar.md))
+6. Claims check — `claims/CHECK.md` (template [assets/claims-check.md](assets/claims-check.md))
 7. Relevant subagent packs (docs, video, landing, social, stores, locale, pricing, SEO cluster, skill distribution, email, press, measurement, …)
 8. Funding or talent pack if relevant — `funding/PITCH.md`, `talent/OFFER.md`
 
-One-slice asks: that slice + the brief.
+One-slice asks: that slice + the brief. Store, paid, funding, sale, or skill-submit slices still run claims and/or legal-checklist as in the workflow.
 
 ## Subagents
 
@@ -147,6 +147,8 @@ Parent synthesizes. Children do not invent channels, UI, or metrics.
 | Talent / sale inlined in parent | talent-agent |
 | Empty marketing-plan template | marketing-plan-agent after core |
 | Paid / store / sale without legal | legal-checklist-agent |
+| One-slice store/paid/website without claims or legal | Still run claims-agent and legal-checklist-agent |
+| Website ask dispatched Play/App/extension agents | store = none; `/promote-website` |
 | Steam / Microsoft Store as if a store agent exists | UNLISTED listing pack |
 | Every AI host on earth | Catalog table only |
 
