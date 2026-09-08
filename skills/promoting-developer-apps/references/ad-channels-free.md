@@ -26,7 +26,7 @@ For each pick include: why this product, asset, CTA, metric, first action this w
 | GitHub README + topics | Libraries, CLIs, templates | README, social preview, topics | Stars, clones |
 | GitHub Discussions / Issues | OSS community | Templates, good-first-issues | Repeat contributors |
 | npm / PyPI / crates.io / Maven listing | Packages | Description, keywords, README | Downloads |
-| VS Code / JetBrains marketplace | Editor extensions | Marketplace listing | Installs |
+| VS Code / JetBrains marketplace | Editor extensions | Marketplace listing | Installs. VS Code/Chrome-like add-ons → **extension-store-agent**. JetBrains listing pack is `UNLISTED — no store agent` |
 | Docker Hub / GHCR | Infra images | Description + example compose | Pulls |
 | Stack Overflow (answer, not spam) | Tools that solve a named error | Genuine answer + link if relevant | Qualified visits |
 
@@ -54,11 +54,11 @@ For each pick include: why this product, asset, CTA, metric, first action this w
 | Google Play listing (ASO) | Android | Title, short + full desc, graphics | Impressions → store conversion |
 | Play pre-registration | Unreleased Android | Pre-reg listing + notify | Pre-reg count |
 | Play testing track (closed/open) | Unproven Android build | Track link + feedback prompt | Crash-free + happy paths |
-| F-Droid listing | OSS Android | Metadata + source | Sideload installs |
-| Microsoft Store | Windows apps | Listing | Installs |
+| F-Droid listing | OSS Android | Metadata + source | Sideload installs. **No store-pack agent** — listing pack is `UNLISTED` |
+| Microsoft Store | Windows apps | Listing | Installs. **No store-pack agent** — listing pack is `UNLISTED` |
 | Chrome / Firefox / Edge add-on stores | Extensions | Store listing | Weekly users |
-| Steam / itch.io (organic page) | Games | Page + trailer | Wishlists |
-| Homebrew / scoop / winget / apt pages | CLIs | Formula + description | Installs |
+| Steam / itch.io (organic page) | Games | Page + trailer | Wishlists. **No store-pack agent** — listing pack is `UNLISTED` |
+| Homebrew / scoop / winget / apt pages | CLIs | Formula + description | Installs. Use **oss-launch-agent** |
 
 ## SEO and owned
 

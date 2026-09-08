@@ -47,6 +47,20 @@ No public repo → make it public first. Do not invent a marketplace URL.
 
 Each row after the attempt: status, timestamp, confirmation text or error, URL opened.
 
+## Not in this catalog
+
+Do not invent submit URLs. If the user named one of these, status is `blocked-on-missing-field` (no portal in this catalog) unless they provide a documented form:
+
+| Host | Why it is not a catalog row |
+|------|-----------------------------|
+| Gemini / Gems / Google agentspace | No public skill-marketplace form in this spec |
+| Claude.ai web plugin directory | This spec submits via Claude Code CLI + `marketplace.json` only |
+| Windsurf, Cline, Continue, Goose, Amp, OpenCode | Install via generic Agent Skills copy, not a first-party form |
+| JetBrains AI / Amazon Q | No documented public skill form here |
+| skills.sh leaderboard | `npx skills add` is a local install, not a leaderboard listing |
+
+“Submit all” / “all AI systems” means **every row in the host catalog table above**, not every AI product on earth.
+
 ## Fill rules for web forms
 
 - Use facts from the repo. Do not invent privacy-policy, terms, or company legal URLs. If the portal requires them and they are missing → `blocked-on-missing-field` (tell the user the exact field).
