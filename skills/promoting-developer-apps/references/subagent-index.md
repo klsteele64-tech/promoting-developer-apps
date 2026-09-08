@@ -2,7 +2,7 @@
 
 Parent skill: **promoting-developer-apps**. Dispatch; do not inline. If the host cannot spawn, run each file as an isolated pass.
 
-Do not run every agent on every ask. One-slice asks: that agent + the brief. Store, paid, funding, sale, or skill-submit slices still run **claims-agent** and/or **legal-checklist-agent**.
+Do not run every agent on every ask. One-slice asks: that agent + the brief. Store, paid, funding, sale, or skill-submit slices still run **claims-agent** and **legal-checklist-agent**. Public-copy slices inherit must-not-claim from positioning.
 
 Website-only (store = none): **landing-agent** + **channel-scout**. Optional **seo-cluster-agent** / **social-agent**. Never play/app/extension store agents.
 
@@ -17,8 +17,8 @@ Website-only (store = none): **landing-agent** + **channel-scout**. Optional **s
 | 5 | pricing-agent | Paid, freemium, or revenue goal |
 | 6 | locale-agent | Extra languages or store countries |
 | 7 | marketing-plan-agent | After 1–4 exist (synthesizes; does not invent) |
-| 8 | skill-distribution-agent | Product is a skill/plugin |
-| 9 | legal-checklist-agent | Store, paid row, funding, or public sale |
+| 8 | skill-distribution-agent | Product is a skill/plugin (claims-agent on listing copy first) |
+| 9 | legal-checklist-agent | Store, paid row, funding, public sale, or skill-submit |
 
 ## Content (asked or missing)
 

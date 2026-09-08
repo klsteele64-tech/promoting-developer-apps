@@ -4,7 +4,7 @@ description: Use when a developer needs to promote an app or website, plan free 
 license: MIT
 metadata:
   author: Dev Launch Campaign
-  version: "1.8.1"
+  version: "1.8.2"
   category: marketing
 ---
 
@@ -36,9 +36,9 @@ Write [assets/campaign-brief.md](assets/campaign-brief.md). Missing facts: [refe
 6. Paid/freemium or revenue goal → **pricing-agent** ([subagents/pricing-agent.md](subagents/pricing-agent.md)). Extra languages or store countries → **locale-agent** ([subagents/locale-agent.md](subagents/locale-agent.md)).
 7. **marketing-plan-agent** ([subagents/marketing-plan-agent.md](subagents/marketing-plan-agent.md)) synthesizes positioning + intensity + channels + claims. Do not emit an empty `assets/marketing-plan.md`.
 8. Content / store / growth slices → dispatch only the agents that apply (table below). SEO / “docs that rank” → **seo-cluster-agent**. Pulse/Blitz → **measurement-agent**, **press-kit-agent**, **retention-agent**. Method picker: [references/content-studio.md](references/content-studio.md).
-9. Product is a skill/plugin, or “publish / submit to AI hosts” → **skill-distribution-agent** ([subagents/skill-distribution-agent.md](subagents/skill-distribution-agent.md)). Ask all vs named hosts, then **submit** each chosen form or CLI. “All AI systems” = the catalog table, not every host on earth.
+9. Product is a skill/plugin, or “publish / submit to AI hosts” → **skill-distribution-agent** ([subagents/skill-distribution-agent.md](subagents/skill-distribution-agent.md)). Ask all vs named hosts, then **submit** each chosen form or CLI. “All AI systems” = the catalog table, not every host on earth. Run **claims-agent** on listing copy before submit.
 10. Money goal → **funding-agent**. Talent or sale → **talent-agent** ([subagents/talent-agent.md](subagents/talent-agent.md)).
-11. Store, paid row, funding, or a public sale listing → **legal-checklist-agent** ([subagents/legal-checklist-agent.md](subagents/legal-checklist-agent.md)). One-slice slash commands (`/promote-play-store-app`, `/ad-channels`, `/funding-plan`, `/promote-website`, …) still run this step. Do not skip because the user asked for one slice.
+11. Store, paid row, funding, public sale, or skill-submit → **legal-checklist-agent** ([subagents/legal-checklist-agent.md](subagents/legal-checklist-agent.md)). One-slice slash commands (`/promote-play-store-app`, `/ad-channels`, `/funding-plan`, `/promote-website`, `/promote-skill`, …) still run this step. Do not skip because the user asked for one slice.
 12. Website-only (store = none, or surface = website): **landing-agent** + **channel-scout**. SEO / “docs that rank” → **seo-cluster-agent**. Launch posts → **social-agent**. Do not dispatch play/app/extension store agents. Command: `/promote-website`.
 13. Live listing → **reviews-agent**.
 14. Filled runtime files (`marketing/PLAN.md`, `positioning/POSITIONING.md`, `campaign/CHANNEL-PLAN.md`, …) win over empty `assets/` templates. Do not re-emit a blank template on top of a filled pack. Emit any remaining unused templates only if that slice never ran.
@@ -84,7 +84,7 @@ Docs = **docs-agent**. Video = **video-agent** (`walkthrough/index.html`). Landi
 7. Relevant subagent packs (docs, video, landing, social, stores, locale, pricing, SEO cluster, skill distribution, email, press, measurement, …)
 8. Funding or talent pack if relevant — `funding/PITCH.md`, `talent/OFFER.md`
 
-One-slice asks: that slice + the brief. Store, paid, funding, sale, or skill-submit slices still run claims and/or legal-checklist as in the workflow.
+One-slice asks: that slice + the brief. Store, paid, funding, sale, or skill-submit slices still run claims-agent and legal-checklist-agent as in the workflow. Public-copy slices inherit must-not-claim from positioning.
 
 ## Subagents
 
@@ -147,7 +147,8 @@ Parent synthesizes. Children do not invent channels, UI, or metrics.
 | Talent / sale inlined in parent | talent-agent |
 | Empty marketing-plan template | marketing-plan-agent after core |
 | Paid / store / sale without legal | legal-checklist-agent |
-| One-slice store/paid/website without claims or legal | Still run claims-agent and legal-checklist-agent |
+| One-slice store/paid/website/skill-submit without claims or legal | Still run claims-agent and legal-checklist-agent |
+| Public docs/video/reviews/community without must-not-claim | Inherit from positioning |
 | Website ask dispatched Play/App/extension agents | store = none; `/promote-website` |
 | Steam / Microsoft Store as if a store agent exists | UNLISTED listing pack |
 | Every AI host on earth | Catalog table only |
