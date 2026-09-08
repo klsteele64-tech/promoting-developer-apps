@@ -1,8 +1,13 @@
 # Content studio
 
-Generate documentation and video **briefs** from the product. Pick one method.
+Pick a source method, then dispatch a subagent of **promoting-developer-apps**:
 
-If the host can spawn subagents, use the agent table in SKILL.md. Parent merges; children do not invent product facts.
+- Documents → **docs-agent** ([../subagents/docs-agent.md](../subagents/docs-agent.md)) — write the seven files
+- Walkthrough / demo video → **video-agent** ([../subagents/video-agent.md](../subagents/video-agent.md)) — write the playable player
+
+Do not stop at the old outline/brief templates when the user asked to create docs or a video. The parent does not implement those files; it dispatches.
+
+If the host cannot spawn subagents, run each instruction file as an isolated pass. Parent merges; children do not invent product facts.
 
 ## Method A — Repo walk
 
@@ -10,11 +15,8 @@ Use when a repo, docs folder, or live site is available.
 
 1. Read README, package manifest, routes/screens, env examples, tests named after features.
 2. List capabilities as user jobs, not file names.
-3. Write: README hero (5–8 lines), getting-started (10 minutes), feature outline, FAQ from likely failures, changelog skeleton.
-4. Write a 60–90s video script that shows the first success path only.
-5. Flag unknowns as `UNKNOWN` — do not guess APIs or pricing.
-
-Output templates: [../assets/docs-outline.md](../assets/docs-outline.md), [../assets/video-brief.md](../assets/video-brief.md).
+3. Hand facts to docs-agent and/or video-agent.
+4. Flag unknowns as `UNKNOWN` — do not guess APIs or pricing.
 
 ## Method B — Founder interview
 
@@ -22,8 +24,7 @@ Use when the repo is thin or the offer is talent/for-sale.
 
 1. Run [interview-intake.md](interview-intake.md).
 2. Turn answers into a positioning line: `{ICP} uses {product} to {job} instead of {substitute}`.
-3. Write docs as if a new user landed from ads: problem, first win, pricing, objections.
-4. Video: talking-head + 3 screen inserts. No feature dump.
+3. Hand answers to docs-agent and/or video-agent. No feature dump.
 
 ## Method C — Capture replay
 
@@ -33,7 +34,7 @@ Use when the user can record a happy path (screen, clicks, or timestamp notes).
 2. Map steps. Cut dead air and setup.
 3. Script: hook (0–5s), problem (5–15s), 3–5 actions, CTA.
 4. Shot list with on-screen copy (max 7 words per card).
-5. If no recording exists, produce the shot list they should capture next — do not fake a walkthrough of UI you have not seen.
+5. If no recording exists, still dispatch video-agent with `placeholder: true` scenes and a capture list. Do not fake UI you have not seen.
 
 ## Method D — Parallel studio
 
@@ -43,8 +44,8 @@ Spawn (or simulate) four workstreams at once:
 
 | Stream | Output |
 |--------|--------|
-| docs-agent | README + getting-started + FAQ |
-| video-agent | 60–90s script + 15s cutdown + shot list |
+| docs-agent | Seven-file document set |
+| video-agent | Playable walkthrough + SRT + script |
 | social-agent | PH first comment, Show HN draft, X thread (8–12), LinkedIn post |
 | changelog-agent | Last 3 ship notes in customer language |
 
@@ -52,7 +53,7 @@ Rules:
 
 - One shared fact sheet. No stream invents pricing, logos, or metrics.
 - Social posts reuse the same CTA and UTM pattern (`utm_source`, `utm_medium`, `utm_campaign`).
-- Video remains a script/storyboard unless the host rendered media.
+- Walkthrough remains the HTML player unless an MP4 was exported.
 
 ## Four video shapes (any method)
 
@@ -67,16 +68,12 @@ Always include: hook, who it's for, one success path, CTA, on-screen text, b-rol
 
 ## Documentation minimum
 
-A content pack is incomplete without all five:
+A document set is incomplete without the seven files from docs-agent (`docs/app/`). Spec: [doc-set.md](doc-set.md).
 
-1. One-sentence job-to-be-done
-2. Install or open path (≤10 minutes)
-3. First success (screenshot or step list)
-4. Pricing or license
-5. Support path
+A walkthrough is incomplete without `index.html`, `scenes.json`, `captions.srt`, and `SCRIPT.md`. Spec: [walkthrough-production.md](walkthrough-production.md).
 
 ## Honesty
 
-- Do not claim a video file was produced if only a script exists.
+- Do not claim an MP4 was produced if only the HTML player exists.
 - Do not paste copyrighted docs from other products.
 - Mark inferred facts `INFERRED` and ask to confirm before publish.
