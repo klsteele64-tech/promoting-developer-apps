@@ -11,8 +11,9 @@ When you ask to promote an app or website, the agent:
 1. Fills a **campaign brief**
 2. Picks one of **four intensities**: Whisper → Signal → Pulse → Blitz
 3. Builds a **channel plan** with **Free** and **Paid** catalogs kept separate
-4. Can generate **docs and video briefs** four ways (repo walk, interview, capture replay, parallel studio)
-5. Can open a **funding / crowdfunding** track or a **sell the app / sell talent** track
+4. Can dispatch **docs-agent** to write a full document set (README, getting-started, features, FAQ, changelog, support)
+5. Can dispatch **video-agent** to create a playable walkthrough (HTML player, scenes, captions, script)
+6. Can open a **funding / crowdfunding** track or a **sell the app / sell talent** track
 
 It **plans** campaigns. It does not open Google Ads or Meta and spend money. It does not manage users of this skill.
 
@@ -41,12 +42,13 @@ Full store-by-store steps: [MARKETPLACE.md](MARKETPLACE.md).
 Build a marketing campaign for my app.
 Compare free vs paid ads for this product.
 Give me all four rollout strategies and recommend one.
-Generate docs and a video brief from this repo.
+Write documentation for this app.
+Create a walkthrough video of this app.
 Draft a Kickstarter / angel funding plan.
 Help me sell this app or package my freelance offer.
 ```
 
-In Cursor, slash commands: `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/launch-content`, `/funding-plan`, `/sell-app-or-talent`.
+In Cursor, slash commands: `/launch-campaign`, `/ad-channels`, `/rollout-plan`, `/create-app-docs`, `/create-walkthrough-video`, `/launch-content`, `/funding-plan`, `/sell-app-or-talent`.
 
 ## Package layout
 
@@ -56,7 +58,9 @@ plugin.json                         Agent Plugins 1.0 (Cursor, ChatGPT, Copilot,
 .codex-plugin/plugin.json           ChatGPT / Codex plugin manifest
 .claude-plugin/plugin.json          Claude Code plugin manifest
 .agents/plugins/marketplace.json    Local ChatGPT / Codex catalog entry
-skills/promoting-developer-apps/    The skill (SKILL.md + catalogs + templates)
+skills/promoting-developer-apps/    Campaign skill (SKILL.md + catalogs + templates)
+  subagents/                        docs-agent and video-agent
+agents/                             Cursor plugin agents (same two subagents)
 commands/                           Cursor slash commands
 ```
 

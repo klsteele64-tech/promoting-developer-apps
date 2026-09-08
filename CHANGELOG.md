@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0 — 2026-09-08
+
+- Fold **creating-app-documents** and **creating-app-walkthroughs** into the main skill as **docs-agent** and **video-agent**
+- Parent skill dispatches those subagents; they are no longer sibling marketplace skills
+- Cursor plugin agents: `agents/docs-agent.md`, `agents/video-agent.md`
+- Commands `/create-app-docs`, `/create-walkthrough-video`, and `/launch-content` go through the main skill
+
 ## 1.1.0 — 2026-09-08
 
 - Feature: **creating-app-documents** writes a seven-file document set (`docs/app/`)
