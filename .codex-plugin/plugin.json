@@ -1,6 +1,6 @@
 {
   "name": "promoting-developer-apps",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Reusable launch, advertising, funding, and talent-sales workflows for developer apps and websites.",
   "author": {
     "name": "Dev Launch Campaign"
@@ -25,6 +25,7 @@
       "Give me all four rollout strategies from whisper to blitz.",
       "Write documentation for my app.",
       "Create a walkthrough video of my app.",
+      "Promote my Google Play Store Android app.",
       "Draft a crowdfunding and funding plan for this app.",
       "Help me sell this app or package my development talent."
     ],

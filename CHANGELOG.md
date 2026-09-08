@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0 — 2026-09-08
+
+- Subagent **play-store-agent** promotes a Google Play Store Android app (listing copy, ASO, graphics brief, release tracks, Free/Paid Play plan)
+- Command: `/promote-play-store-app`
+- Free catalog adds Play pre-registration, testing tracks, and F-Droid; paid catalog adds Google App campaigns (Android)
+
 ## 1.2.0 — 2026-09-08
 
 - Fold **creating-app-documents** and **creating-app-walkthroughs** into the main skill as **docs-agent** and **video-agent**
