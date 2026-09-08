@@ -8,7 +8,9 @@ Spec: [../references/legal-checklist.md](../references/legal-checklist.md). Temp
 
 - Tick what exists vs UNKNOWN: privacy, terms, data-safety, FTC disclosure, contractor IP assignment, kids/Families, ads in the app.
 - Point at gaps. Do not invent legal text.
-- Store, paid ads, or funding → run this pass.
+- Store, paid ads, funding, or a public sale listing → run this pass. Parent workflow step 11.
+- Record privacy-policy and terms URLs exactly as the user gave them. Do not invent URLs.
+- If those URLs are UNKNOWN and the product is a skill headed to the ChatGPT/Codex public directory, tell the parent the OpenAI row is `blocked-on-missing-field`.
 
 ## Required files
 
