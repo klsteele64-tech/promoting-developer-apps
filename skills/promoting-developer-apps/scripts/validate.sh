@@ -37,10 +37,12 @@ need "$SKILL/assets/legal-checklist.md"
 need "$SKILL/assets/locale-plan.md"
 need "$SKILL/assets/pricing-plan.md"
 need "$SKILL/assets/seo-cluster.md"
+need "$SKILL/assets/skill-distribution-plan.md"
 need "$ROOT/commands/launch-campaign.md"
 need "$ROOT/commands/localize-listings.md"
 need "$ROOT/commands/pricing-plan.md"
 need "$ROOT/commands/seo-cluster.md"
+need "$ROOT/commands/promote-skill.md"
 need "$ROOT/commands/promote-play-store-app.md"
 need "$ROOT/commands/promote-app-store.md"
 need "$ROOT/commands/write-landing.md"
@@ -87,6 +89,7 @@ required = {
     "email-agent", "positioning-agent", "channel-scout", "rollout-planner",
     "claims-agent", "funding-agent", "measurement-agent", "legal-checklist-agent",
     "locale-agent", "pricing-agent", "seo-cluster-agent",
+    "skill-distribution-agent",
 }
 have = {p.stem for p in (root / "skills/promoting-developer-apps/subagents").glob("*.md")}
 missing = sorted(required - have)
