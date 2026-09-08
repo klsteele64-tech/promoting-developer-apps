@@ -9,16 +9,16 @@ Override submit-all: no
 
 | Host | Submit path | Status | Confirmation / block |
 |------|-------------|--------|----------------------|
-| Cursor official | https://cursor.com/marketplace/publish | pending-browser | Claims PASS; needs publisher Cursor session |
-| cursor.directory | https://cursor.directory/plugins/new | pending-browser | Claims PASS; needs GitHub or Google sign-in |
+| Cursor official | https://cursor.com/marketplace/publish | blocked-on-auth | Claims PASS; publisher Cursor session required; agent browser VM unreachable |
+| cursor.directory | https://cursor.directory/plugins/new | blocked-on-auth | Claims PASS; GitHub or Google sign-in required; agent browser VM unreachable |
 
 ## Package check
 
-- [x] Validate script passed
+- [x] Validate script passed (on Cloud VM before outage)
 - [x] Zip built (`promoting-developer-apps-skill.zip`) — not required for these two hosts
 - [x] One `skills/promoting-developer-apps/SKILL.md`
 - [x] Root `plugin.json` + vendor overlays (`.cursor-plugin/`)
-- [ ] `.claude-plugin/marketplace.json` if Claude chosen — Claude not in this submit
+- [ ] Claude marketplace — not in this submit
 
 ## Form packets
 
