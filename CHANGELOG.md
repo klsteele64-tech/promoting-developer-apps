@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.9.0 — 2026-09-10
+
+- Add parent slash command **`/promote`** as the single top-level router (same pattern as `/superpowers`)
+- `/promote` loads the parent skill, presents a mode menu when needed, and **dispatches** subagents — it never inlines slice work
+- All existing slash commands are now **aliases** of `/promote`: they must announce the parent skill, then dispatch only their slice
+- `SKILL.md` documents the parent-router entry path; `validate.sh` requires `commands/promote.md` and claims/legal mentions on it
+
 ## 1.8.2 — 2026-09-08
 
 - Remaining public-copy agents inherit must-not-claim: docs, video, changelog, reviews, community, retention, partner, funding, talent, skill-distribution, marketing-plan, channel-scout, pricing, creative
