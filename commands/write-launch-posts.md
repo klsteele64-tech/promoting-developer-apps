@@ -3,4 +3,13 @@ name: write-launch-posts
 description: Write PH, Show HN, X thread, and LinkedIn launch posts
 ---
 
-Load `skills/promoting-developer-apps/SKILL.md` and dispatch **social-agent** (`skills/promoting-developer-apps/subagents/social-agent.md`). Ask only missing facts. Inherit must-not-claim from positioning. Performance numbers or testimonials → dispatch **claims-agent**. Do not place ads or publish to stores. Mark UNKNOWN instead of inventing facts.
+**Parent router:** This is a slice of `/promote`. Enter through the parent skill — do not treat this command as a sibling skill.
+
+1. Load `skills/promoting-developer-apps/SKILL.md` and announce: `Using promoting-developer-apps (via /write-launch-posts)`.
+2. Ask only missing intake for a brief (inspect README/landing first; mark UNKNOWN instead of inventing).
+3. Never implement the slice yourself — dispatch the subagent file(s) below (spawn when the host can; otherwise run as an isolated pass).
+4. Return packs to the parent synthesizer. Do not run the full campaign unless the user expands scope.
+
+## Slice instructions
+
+Dispatch **social-agent** (`skills/promoting-developer-apps/subagents/social-agent.md`). Inherit must-not-claim from positioning. Performance numbers or testimonials → dispatch **claims-agent**. Do not place ads or publish to stores.

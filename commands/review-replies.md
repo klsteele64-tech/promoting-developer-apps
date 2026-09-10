@@ -3,4 +3,13 @@ name: review-replies
 description: Review-ask timing and 1-star reply playbook
 ---
 
-Load `skills/promoting-developer-apps/SKILL.md` and dispatch **reviews-agent** (`skills/promoting-developer-apps/subagents/reviews-agent.md`). Ask only missing facts. Inherit must-not-claim from positioning. Do not invent ratings, quotes, or reviews. Do not place ads or publish to stores. Mark UNKNOWN instead of inventing facts.
+**Parent router:** This is a slice of `/promote`. Enter through the parent skill — do not treat this command as a sibling skill.
+
+1. Load `skills/promoting-developer-apps/SKILL.md` and announce: `Using promoting-developer-apps (via /review-replies)`.
+2. Ask only missing intake for a brief (inspect README/landing first; mark UNKNOWN instead of inventing).
+3. Never implement the slice yourself — dispatch the subagent file(s) below (spawn when the host can; otherwise run as an isolated pass).
+4. Return packs to the parent synthesizer. Do not run the full campaign unless the user expands scope.
+
+## Slice instructions
+
+Dispatch **reviews-agent** (`skills/promoting-developer-apps/subagents/reviews-agent.md`). Inherit must-not-claim from positioning. Do not invent ratings, quotes, or reviews. Do not place ads or publish to stores.
