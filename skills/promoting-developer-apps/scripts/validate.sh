@@ -113,7 +113,7 @@ if agents != have:
     print(f"agents/ must match subagents/ 1:1, only-agents={sorted(agents-have)} only-sub={sorted(have-agents)}")
     sys.exit(1)
 required_commands = {
-    "launch-campaign", "launch-content", "ad-channels", "rollout-plan",
+    "promote", "launch-campaign", "launch-content", "ad-channels", "rollout-plan",
     "write-positioning", "claims-check", "create-app-docs", "create-walkthrough-video",
     "write-landing", "write-launch-posts", "write-ship-notes", "email-sequence",
     "press-kit", "creative-matrix", "promote-play-store-app", "promote-app-store",
@@ -134,7 +134,7 @@ for agent in sorted(have):
         print(f"agents/{agent}.md must load {needle}")
         sys.exit(1)
 legal_cmds = {
-    "promote-play-store-app", "promote-app-store", "promote-extension",
+    "promote", "promote-play-store-app", "promote-app-store", "promote-extension",
     "funding-plan", "sell-app-or-talent", "ad-channels", "promote-website",
     "launch-campaign", "promote-skill", "partner-pack",
 }
@@ -144,7 +144,7 @@ for name in sorted(legal_cmds):
         print(f"commands/{name}.md must dispatch or mention legal-checklist on store/paid/funding/sale/submit")
         sys.exit(1)
 claims_cmds = {
-    "promote-play-store-app", "promote-app-store", "promote-extension",
+    "promote", "promote-play-store-app", "promote-app-store", "promote-extension",
     "ad-channels", "promote-website", "launch-campaign", "promote-skill",
     "funding-plan", "sell-app-or-talent",
 }

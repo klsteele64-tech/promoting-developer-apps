@@ -4,7 +4,7 @@ description: Use when a developer needs to promote an app or website, plan free 
 license: MIT
 metadata:
   author: Dev Launch Campaign
-  version: "1.8.2"
+  version: "1.9.0"
   category: marketing
 ---
 
@@ -17,6 +17,18 @@ Plans campaigns only. Does not place live ads or publish to app stores. **Except
 This is a marketplace skill, not a web app. Do not add login, signup, user accounts, sessions, roles, or an admin console.
 
 Every specialized slice is a **subagent of this skill**. The parent dispatches. It does not implement those files itself. Dispatch map: [references/subagent-index.md](references/subagent-index.md).
+
+## Entry (parent router)
+
+Preferred Cursor entry: **`/promote`** (`commands/promote.md`) — same idea as a `/superpowers` router.
+
+1. Announce `Using promoting-developer-apps`.
+2. Ask only missing intake.
+3. Present a short mode menu when the slice is unclear, or jump straight to a named slice.
+4. **Dispatch** subagents from [references/subagent-index.md](references/subagent-index.md). Never inline their bodies in the parent turn.
+5. Synthesize returned packs into the deliverable order below.
+
+Other slash commands (`/launch-campaign`, `/ad-channels`, `/write-landing`, `/promote-skill`, …) are **aliases** of `/promote`. They must still load this parent skill first, announce it, then dispatch only their slice.
 
 ## Intake
 

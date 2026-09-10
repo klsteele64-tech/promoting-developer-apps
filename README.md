@@ -57,7 +57,9 @@ Draft a Kickstarter plan.
 Help me sell this app or package my freelance offer.
 ```
 
-In Cursor, slash commands include `/launch-campaign`, `/promote-website`, `/marketing-plan`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-skill`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, `/legal-checklist`, and the other slice commands under `commands/`.
+In Cursor, start with **`/promote`** — the parent router (like `/superpowers`). It loads the skill, asks missing intake, shows a short mode menu when needed, then dispatches subagents.
+
+Slice aliases still work and route through the same parent: `/launch-campaign`, `/promote-website`, `/marketing-plan`, `/ad-channels`, `/rollout-plan`, `/write-landing`, `/write-launch-posts`, `/localize-listings`, `/pricing-plan`, `/seo-cluster`, `/promote-skill`, `/promote-play-store-app`, `/promote-app-store`, `/promote-extension`, `/oss-launch`, `/email-sequence`, `/press-kit`, `/funding-plan`, `/sell-app-or-talent`, `/legal-checklist`, and the other commands under `commands/`.
 
 ## Package layout
 
